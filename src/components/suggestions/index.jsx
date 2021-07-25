@@ -1,10 +1,13 @@
 import React from 'react'
+import Main from './components/main/main'
+import Sidebar from './components/sidebar/sidebar';
 
 const Suggestions = () => {
     return (
-        <div>
-            Fabian ist toll
-        </div>
+        <>
+            <Sidebar/>
+            <Main/>
+        </>
     )
 }
 
