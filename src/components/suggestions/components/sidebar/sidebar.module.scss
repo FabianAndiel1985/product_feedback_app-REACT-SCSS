@@ -9,7 +9,6 @@
 
 @mixin basicWhiteBoxStyles {
     background-color:var(--box-background); 
-    width:20%;
     margin-top: 0.8em;
     padding: 1.5em;
     font-size: 1.5em;
@@ -25,9 +24,8 @@
  
 
 .sidebarGradient {
-    background: radial-gradient(circle, #E84D70, #A337F6, #28A7ED);
+    background: linear-gradient( #E84D70, #A337F6, #28A7ED);
     color:white;
-    width:20%;
     padding: 3em 1.5em 0.5em;
     font-size: 2em;
 }
@@ -42,7 +40,7 @@
     @include basicWhiteBoxStyles;
 
         div {
-            width: 60%;
+           
             display:flex;
             justify-content: space-between;
             
@@ -56,7 +54,6 @@
         }
 
         ul {
-            width: 60%;
             padding-left: 1.5em;
             li{
 

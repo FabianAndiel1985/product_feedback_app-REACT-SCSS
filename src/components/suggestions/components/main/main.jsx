@@ -2,6 +2,7 @@ import React from 'react'
 
 const Main = () => {
     return (
+
         <p>
         Sort by:
         Most upvotes

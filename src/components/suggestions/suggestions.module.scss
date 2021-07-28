@@ -1,0 +1,15 @@
+.suggestionsContainer {
+    
+    display:flex;
+    border:2px solid black;
+
+    .suggestionsContainer__sidebar {
+        border:2px solid red;
+    }
+
+
+    .suggestionsContainer__main {
+        border:2px solid green;
+    }
+
+}
