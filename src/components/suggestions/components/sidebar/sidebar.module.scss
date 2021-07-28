@@ -1,0 +1,107 @@
+@mixin row {
+    display: flex;
+}
+
+@mixin push2ndElementToSide {
+    display:inline-block;
+    margin-left: auto;
+}
+
+@mixin basicWhiteBoxStyles {
+    background-color:var(--box-background); 
+    width:20%;
+    margin-top: 0.8em;
+    padding: 1.5em;
+    font-size: 1.5em;
+}
+
+@mixin individualBulletPoint($color) {
+        content: "\2022";
+        color: $color;
+        font-weight: bold;
+        width: 1em;
+        margin-left: -1em;
+}
+ 
+
+.sidebarGradient {
+    background: radial-gradient(circle, #E84D70, #A337F6, #28A7ED);
+    color:white;
+    width:20%;
+    padding: 3em 1.5em 0.5em;
+    font-size: 2em;
+}
+
+.sidebarWhiteFirst {
+    @include basicWhiteBoxStyles;
+
+}
+
+
+.sidebarWhiteSecond {
+    @include basicWhiteBoxStyles;
+
+        div {
+            width: 60%;
+            display:flex;
+            justify-content: space-between;
+            
+            span {
+             margin-left:1.5em;   
+             font-weight: bold;
+            }
+            a {
+                color:blue;
+            }
+        }
+
+        ul {
+            width: 60%;
+            padding-left: 1.5em;
+            li{
+
+                &:nth-child(1){
+                    @include row;
+                    
+                    &::before {
+                        @include individualBulletPoint(#F49F85);
+                    }
+
+                   span{
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                   }
+                }
+
+                &:nth-child(2){
+                    @include row;
+
+                    &::before {
+                        @include individualBulletPoint(#AD1FEA);
+                    }
+                 
+                    span {
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                    }
+                }
+
+                &:nth-child(3){
+                    @include row;
+
+                    &::before {
+                        @include individualBulletPoint(#4661E6);
+                    }
+
+                    span {
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                    }
+                }
+            }
+            // END LI------
+        }
+}

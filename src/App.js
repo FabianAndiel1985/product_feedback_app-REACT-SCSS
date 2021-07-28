@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Suggestions from "./components/suggestions";
+import "./App.css";
 
 
 
