@@ -1,0 +1,34 @@
+.LongWhiteBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.4em;
+    background-color: var(--box-background);
+
+    .LongWhiteBox__firstFlexItem{
+        display: inherit;
+        flex-direction: row;
+
+        .LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text{
+            h3{
+                text-align: left;
+                font-weight: bold;
+                letter-spacing: -0.25px;
+                margin-bottom: 0.1em;
+            }
+        }
+    }
+
+    .LongWhiteBox__secondFlexItem{
+        display: inherit;
+        align-items:center;
+        .LongWhiteBox__secondFlexItem__container{
+            display: inherit;
+            flex-direction: row;
+
+            div{
+                margin-left: 0.5em;
+            }
+        }
+    }   
+}
