@@ -4,17 +4,19 @@
     justify-content: space-between;
     padding: 1.4em;
     background-color: var(--box-background);
+    border-radius: 15px;
 
     .LongWhiteBox__firstFlexItem{
         display: inherit;
         flex-direction: row;
-
+        .LongWhiteBox__firstFlexItem__counter{
+            position: relative;
+            display: flex;
+            padding: 0 1em 4em 1em;
+         }
         .LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text{
-            h3{
-                text-align: left;
-                font-weight: bold;
-                letter-spacing: -0.25px;
-                margin-bottom: 0.1em;
+            p {
+                margin: 0.1em 0em !important;
             }
         }
     }

@@ -1,10 +1,17 @@
 import React from 'react'
 import * as pillStyles from "./pill.module.scss" 
 
-const Pill = ({text})=> {
+
+
+const Pill = ({text,orientation,children})=> {
+
+    let pillClass =  orientation === "horizontal" ? pillStyles.pillHorizontal : pillStyles.pillVertical;
+
+
     return (
-        <div className={pillStyles.pill}>
+        <div className={pillClass}>
             <span>{text}</span>
+            {children}
         </div>
     )
 }

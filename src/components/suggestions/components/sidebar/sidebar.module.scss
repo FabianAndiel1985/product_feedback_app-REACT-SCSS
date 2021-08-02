@@ -22,7 +22,6 @@
         margin-left: -1em;
 }
  
-
 .sidebarGradient {
     background: linear-gradient( #E84D70, #A337F6, #28A7ED);
     color:white;
@@ -35,12 +34,10 @@
 
 }
 
-
 .sidebarWhiteSecond {
     @include basicWhiteBoxStyles;
 
         div {
-           
             display:flex;
             justify-content: space-between;
             

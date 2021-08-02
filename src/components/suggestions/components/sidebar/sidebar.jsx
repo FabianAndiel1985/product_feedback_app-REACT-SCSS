@@ -13,18 +13,19 @@ const Sidebar = () => {
 
       <div className={sidebarStyles.sidebarWhiteFirst}>
           <div>
-              <Pill text={"All"}/>
-              <Pill text={"UI"}/>  
-              <Pill text={"UX"}/>  
+              <Pill text={"All"} orientation={"horizontal"}/>
+              <Pill text={"UI"} orientation={"horizontal"}/>  
+              <Pill text={"UX"} orientation={"horizontal"}/>  
           </div>
 
           <div>
-            <Pill text={"Enhancement"}/>
-            <Pill text={"Bug"}/>  
+            <Pill text={"Enhancement"} orientation={"horizontal"}/>
+            <Pill text={"Enhancement"} orientation={"horizontal"}/>
+            <Pill text={"Bug"} orientation={"horizontal"} />  
           </div>
 
           <div>
-            <Pill text={"Feature"}/>  
+            <Pill text={"Feature"} orientation={"horizontal"}/>  
           </div>
             
       </div>

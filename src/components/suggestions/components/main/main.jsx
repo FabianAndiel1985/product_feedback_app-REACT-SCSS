@@ -1,12 +1,16 @@
 import React from 'react'
 import LongWhiteBox from './components/LongWhiteBox';
-
+import Data from "../../../../assets/data.json";
 
 const Main = () => {
+
+    const {productRequests} = Data;
+
+    console.log(productRequests);
+
     return (
 
-        <>
-        
+        <>        
             <p>
             Sort by:
             Most upvotes
@@ -23,8 +27,15 @@ const Main = () => {
             Add Feedback
 
             </p>
+
+            {Data && 
+                productRequests.map(request=>(
+                    // <p> {request.title}</p>
+                    <LongWhiteBox />
+                ))
+            }
             
-            <LongWhiteBox/>
+            {/* <LongWhiteBox/> */}
         </>
     )
 }

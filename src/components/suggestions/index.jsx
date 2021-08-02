@@ -5,13 +5,10 @@ import * as suggestionStyles from './suggestions.module.scss';
 
 const Suggestions = () => {
     return (
-        
         <div className={suggestionStyles.suggestionsContainer}>
-            {/* eventually ommit the div */}
             <div className={suggestionStyles.suggestionsContainer__sidebar}>
                 <Sidebar/>
             </div>
-            {/* eventually ommit this div */}
             <div className={suggestionStyles.suggestionsContainer__main}>
                 <Main/>
             </div>
