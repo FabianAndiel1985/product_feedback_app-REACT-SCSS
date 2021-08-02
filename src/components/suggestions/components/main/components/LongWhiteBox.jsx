@@ -1,8 +1,6 @@
 import * as LongWhiteBoxStyles from "./LongWhiteBox.module.scss";
 import Pill from '../../sidebar/components/pill';
 import Counter from "./Counter";
-import { useEffect } from "react";
-
 
 
 const LongWhiteBox = ({title,description,category,upvotes,comments}) => {

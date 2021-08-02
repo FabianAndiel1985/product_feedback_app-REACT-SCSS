@@ -30,7 +30,6 @@ const Main = () => {
 
             {Data && 
                 productRequests.map(request=>(
-                    // <p> {request.title}</p>
                     <LongWhiteBox 
                         title={request.title}
                         description={request.description}

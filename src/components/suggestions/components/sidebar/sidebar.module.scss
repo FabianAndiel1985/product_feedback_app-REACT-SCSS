@@ -9,6 +9,7 @@
 
 @mixin basicWhiteBoxStyles {
     background-color:var(--box-background); 
+    border-radius: var(--box-radius);
     margin-top: 0.8em;
     padding: 1.5em;
     font-size: 1.5em;
@@ -27,6 +28,7 @@
     color:white;
     padding: 3em 1.5em 0.5em;
     font-size: 2em;
+    border-radius: var(--box-radius);
 }
 
 .sidebarWhiteFirst {
