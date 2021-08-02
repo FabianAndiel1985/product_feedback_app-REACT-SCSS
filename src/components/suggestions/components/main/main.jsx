@@ -31,7 +31,13 @@ const Main = () => {
             {Data && 
                 productRequests.map(request=>(
                     // <p> {request.title}</p>
-                    <LongWhiteBox />
+                    <LongWhiteBox 
+                        title={request.title}
+                        description={request.description}
+                        category={request.category}
+                        upvotes={request.upvotes}
+                        comments={request.comments}
+                    />
                 ))
             }
             
