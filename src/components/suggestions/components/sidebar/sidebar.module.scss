@@ -24,12 +24,23 @@
 }
  
 .sidebarGradient {
-    background: linear-gradient( #E84D70, #A337F6, #28A7ED);
+    background: url("../../../../assets/background-header.png") no-repeat center center;
+    background-size: cover;
     color:white;
     padding: 3em 1.5em 0.5em;
     font-size: 2em;
     border-radius: var(--box-radius);
 }
+
+// .user-background{
+//     background: url("./images/all-bg-title.jpg") no-repeat center center;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -ms-background-size: cover;
+//     -o-background-size: cover;
+//      background-size: cover;
+//   }
+
 
 .sidebarWhiteFirst {
     @include basicWhiteBoxStyles;
