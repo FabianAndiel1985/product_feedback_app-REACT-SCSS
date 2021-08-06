@@ -1,6 +1,7 @@
 import React from 'react'
 import LongWhiteBox from './components/LongWhiteBox';
 import NoFeedback from './components/NoFeedback';
+import CustomDropdown from '../menubar/components/CustomDropdown';
 
 const Main = ({data}) => {
 
@@ -8,8 +9,9 @@ const Main = ({data}) => {
 
     return (
 
-        <>        
-            
+        <>      
+            <CustomDropdown/>
+
             {data ?
                 data.map(request=>(
                     <LongWhiteBox 

@@ -19,12 +19,10 @@ function Menubar({data}) {
                     {amountOfSuggestions}
                     Suggestions
                 </div>
-                {/* Most upvotes
-                Least upvotes
-                Most comment
-                Least comments
- */}
+                
                 Sort by:
+
+
 
             </div>
             
