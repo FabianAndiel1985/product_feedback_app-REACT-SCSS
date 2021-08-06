@@ -1,6 +1,21 @@
 .firstSection{
     display: flex;
     justify-content: space-between;
+    padding: 0.5em 1.3em 0.5em 1.5em;
     color:white;
     background-color:#3A4374;
+    border-radius: 13px;
+
+    div{
+        display: flex;
+        align-items: center;
+        border:2px solid black;
+
+        .symbol{
+        }
+        .amountOfSuggestions{
+            margin: 0em 4em 0em 0.8em;
+        
+        }
+    }
 }
