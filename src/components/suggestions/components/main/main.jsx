@@ -13,8 +13,7 @@ const Main = () => {
 
         <>        
             
-    
-            {!Data ?
+            {Data ?
                 productRequests.map(request=>(
                     <LongWhiteBox 
                         title={request.title}

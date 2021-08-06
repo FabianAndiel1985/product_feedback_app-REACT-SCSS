@@ -13,15 +13,12 @@ const NoFeedback = ()=> {
                 <br/>
                 We love hearing about new ideas to improve our app.
             </p>
-            {/* <CustomButton/> */}
+            
             <CustomButton 
-            text={"&#43; Add Feedback"}
-            color={"#ad1fea"}
-            hoverColor={""}
+                text={"+ Add Feedback"}
+                color={"#ad1fea"}
+                hoverColor={"#c75af6"}
             /> 
-            {/* <button>
-                &#43; Add Feedback
-            </button>             */}
         </div>
     )
 }
