@@ -9,13 +9,20 @@
     div{
         display: flex;
         align-items: center;
-        border:2px solid black;
-
+     
         .symbol{
         }
         .amountOfSuggestions{
             margin: 0em 4em 0em 0.8em;
-        
+            font-weight: bold;
+
+            .amountOfSuggestions_text {
+                margin: 0em 0em 0em 0.5em;
+            }
+        }
+
+        .sortingCategory{
+            margin: 0em 1em 0em 0em;
         }
     }
 }

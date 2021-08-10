@@ -1,6 +1,6 @@
 import * as menubarStyles from "./menubar.module.scss";
 import CustomButton from "../../../shared/button";
-import { useEffect } from "react";
+import CustomDropdown from "./components/CustomDropdown";
 
 function Menubar({data}) {
 
@@ -16,14 +16,19 @@ function Menubar({data}) {
                 </div>
 
                 <div className={menubarStyles.amountOfSuggestions}>
+                    <div>
                     {amountOfSuggestions}
-                    Suggestions
+                    </div>
+                    <div  className={menubarStyles.amountOfSuggestions_text}>
+                        Suggestions
+                    </div>
                 </div>
                 
-                Sort by:
+                <div className={menubarStyles.sortingCategory}>
+                    Sort by:
+                </div>
 
-
-
+                <CustomDropdown/>
             </div>
             
             <CustomButton 
