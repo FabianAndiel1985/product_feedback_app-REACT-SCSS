@@ -4,7 +4,7 @@ import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import * as customDropdownClass from "./CustomDropdown.module.scss";
 
-const CustomDropdown = () => {
+const CustomDropdown = ({onSortCategoryChange}) => {
 
     const [sortingCriteria, setSortingCriteria] = useState("Most Upvotes")
     
@@ -19,10 +19,7 @@ const CustomDropdown = () => {
       />
   );
 
-      const clickHandler = (e)=>{
-        setSortingCriteria((prevState)=>e.target.innerHTML);
-      }
-
+  
   const CheckSymbol = <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#AD1FEA" stroke-width="2" d="M1 5.233L4.522 9 12 1"/></svg>;
   
   return (
@@ -30,7 +27,7 @@ const CustomDropdown = () => {
       <div className={customDropdownClass.dropDownList_textRow}>
         <div 
           className={customDropdownClass.dropDownList_textRow_text}
-          onClick={clickHandler}
+          onClick={onSortCategoryChange}
         >
           Most Upvotes
         </div> 
@@ -43,7 +40,7 @@ const CustomDropdown = () => {
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}> 
         <div className={customDropdownClass.dropDownList_textRow_text}
-             onClick={clickHandler}>
+             onClick={onSortCategoryChange}>
           Least Upvotes
         </div> 
         <div className={customDropdownClass.dropDownList_textRow_symbol}>
@@ -53,7 +50,7 @@ const CustomDropdown = () => {
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}>
          <div className={customDropdownClass.dropDownList_textRow_text}
-              onClick={clickHandler}
+              onClick={onSortCategoryChange}
          >
             Most Comments
           </div> 
@@ -64,7 +61,7 @@ const CustomDropdown = () => {
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}>
          <div className={customDropdownClass.dropDownList_textRow_text}
-              onClick={clickHandler}
+              onClick={onSortCategoryChange}
          >
             Least Comments
           </div> 
