@@ -1,0 +1,24 @@
+.dropDownList {
+display: flex;
+flex-direction: column !important;
+align-items: center;
+position:absolute;
+width:200px;
+z-index: 9;
+margin: 14em 0em 0em 14em;
+background-color: white;
+color: black;
+cursor: pointer;
+
+    .dropDownList_textRow_text{
+        &:hover{
+            color:#AD1FEA;
+        }
+    }
+
+    .dropDownList_textRow {
+        justify-content: space-between;
+        padding: 0.2em 0.7em;
+        width: 100%;
+    }
+}
