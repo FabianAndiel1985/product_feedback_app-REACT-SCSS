@@ -6,8 +6,14 @@ import * as customDropdownClass from "./CustomDropdown.module.scss";
 
 const CustomDropdown = ({onSortCategoryChange}) => {
 
-    const [sortingCriteria, setSortingCriteria] = useState("Most Upvotes")
+    const [sortingCriteriaComp, setSortingCriteriaComp] = useState("Most Upvotes")
     
+    const setSortingCriteriaCompAndParent = (e)=>{
+      const sortCategory = e.target.innerHTML;
+      onSortCategoryChange(sortCategory)
+      setSortingCriteriaComp(sortCategory)
+    }
+
     const ColoredLine = ({ color }) => (
       <hr
           style={{
@@ -27,46 +33,46 @@ const CustomDropdown = ({onSortCategoryChange}) => {
       <div className={customDropdownClass.dropDownList_textRow}>
         <div 
           className={customDropdownClass.dropDownList_textRow_text}
-          onClick={onSortCategoryChange}
+          onClick={setSortingCriteriaCompAndParent}
         >
           Most Upvotes
         </div> 
         <div 
           className={customDropdownClass.dropDownList_textRow_symbol}
           >
-          {sortingCriteria == "Most Upvotes" ? CheckSymbol : ""}
+          {sortingCriteriaComp == "Most Upvotes" ? CheckSymbol : ""}
         </div>
       </div>
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}> 
         <div className={customDropdownClass.dropDownList_textRow_text}
-             onClick={onSortCategoryChange}>
+             onClick={setSortingCriteriaCompAndParent}>
           Least Upvotes
         </div> 
         <div className={customDropdownClass.dropDownList_textRow_symbol}>
-          {sortingCriteria == "Least Upvotes" ? CheckSymbol : ""}
+          {sortingCriteriaComp == "Least Upvotes" ? CheckSymbol : ""}
         </div>
       </div>
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}>
          <div className={customDropdownClass.dropDownList_textRow_text}
-              onClick={onSortCategoryChange}
+              onClick={setSortingCriteriaCompAndParent}
          >
             Most Comments
           </div> 
           <div className={customDropdownClass.dropDownList_textRow_symbol}>
-            {sortingCriteria == "Most Comments" ? CheckSymbol : ""}
+            {sortingCriteriaComp == "Most Comments" ? CheckSymbol : ""}
           </div>
       </div>
       <ColoredLine color={"black"}/>
       <div className={customDropdownClass.dropDownList_textRow}>
          <div className={customDropdownClass.dropDownList_textRow_text}
-              onClick={onSortCategoryChange}
+              onClick={setSortingCriteriaCompAndParent}
          >
             Least Comments
           </div> 
           <div className={customDropdownClass.dropDownList_textRow_symbol}>
-            {sortingCriteria == "Least Comments" ? CheckSymbol : ""}
+            {sortingCriteriaComp == "Least Comments" ? CheckSymbol : ""}
           </div>
       </div>
       <ColoredLine color={"black"}/>
