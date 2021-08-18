@@ -2,6 +2,7 @@ import * as menubarStyles from "./menubar.module.scss";
 import CustomButton from "../../../shared/button";
 import CustomDropdown from "./components/CustomDropdown";
 import { useState } from "react";
+import { useSelector, useDispatch} from 'react-redux'
 
 function Menubar({data}) {
 
@@ -9,9 +10,14 @@ function Menubar({data}) {
     const amountOfSuggestions = data;
     const [sortingCriteria, setSortingCriteria] = useState("Most Upvotes")
     const [showDropdown, setshowDropdown] = useState(false)
+    
+    const state = useSelector(state => state)
+
+    const dispatch = useDispatch()
 
     const handleSortChange = (sortCategory)=>{
         setSortingCriteria(sortCategory);
+        dispatch({type:sortCategory});
     }
 
     const toggleDropdown = ()=>{
