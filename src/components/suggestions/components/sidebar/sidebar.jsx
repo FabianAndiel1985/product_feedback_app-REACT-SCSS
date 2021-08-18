@@ -20,7 +20,6 @@ const Sidebar = () => {
 
           <div>
             <Pill text={"Enhancement"} orientation={"horizontal"}/>
-            <Pill text={"Enhancement"} orientation={"horizontal"}/>
             <Pill text={"Bug"} orientation={"horizontal"} />  
           </div>
 
