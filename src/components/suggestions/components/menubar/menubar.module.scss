@@ -12,6 +12,7 @@
      
         .symbol{
         }
+        
         .amountOfSuggestions{
             margin: 0em 4em 0em 0.8em;
             font-weight: bold;
@@ -22,7 +23,11 @@
         }
 
         .sortingCategory{
-            margin: 0em 1em 0em 0em;
+            margin: 0em 1.4em 0em 0em;
+            cursor: pointer;
+           .sortBy{
+               margin-right: 0.65em;
+           } 
         }
     }
 }

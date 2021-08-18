@@ -37,8 +37,12 @@ function Menubar({data}) {
                 <div className={menubarStyles.sortingCategory}
                      onClick={toggleDropdown}   
                 >
-                    Sort by:
-                     {sortingCriteria}
+                    <span className={menubarStyles.sortBy}>
+                        Sort by:
+                    </span>
+                    <span>
+                        {sortingCriteria}
+                    </span>
                 </div>
 
                 { showDropdown && 

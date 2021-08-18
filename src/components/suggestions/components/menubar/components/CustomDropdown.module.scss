@@ -5,10 +5,11 @@ align-items: center;
 position:absolute;
 width:200px;
 z-index: 9;
-margin: 14em 0em 0em 14em;
+margin: 16em 0em 0em 14em;
 background-color: white;
 color: black;
 cursor: pointer;
+border-radius: var(--box-radius);
 
     .dropDownList_textRow_text{
         &:hover{

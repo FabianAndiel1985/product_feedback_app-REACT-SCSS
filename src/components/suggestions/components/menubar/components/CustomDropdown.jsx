@@ -75,7 +75,6 @@ const CustomDropdown = ({onSortCategoryChange}) => {
             {sortingCriteriaComp == "Least Comments" ? CheckSymbol : ""}
           </div>
       </div>
-      <ColoredLine color={"black"}/>
     </div>
   );
 };
