@@ -3,13 +3,16 @@ import * as pillStyles from "./pill.module.scss"
 
 
 
-const Pill = ({text,orientation,children})=> {
+const Pill = ({text,orientation,children,setFilterCriteria})=> {
 
     let pillClass =  orientation === "horizontal" ? pillStyles.pillHorizontal : pillStyles.pillVertical;
 
 
     return (
-        <div className={pillClass}>
+        <div 
+         className={pillClass}
+         onClick={()=>setFilterCriteria(`${text}`)}
+         >
             <span>{text}</span>
             {children}
         </div>

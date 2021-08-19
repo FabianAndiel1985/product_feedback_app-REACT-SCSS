@@ -1,7 +1,22 @@
+import { useState } from "react";
 import Pill from "./components/pill";
 import * as sidebarStyles from "./sidebar.module.scss";
+import { useSelector, useDispatch} from 'react-redux'
+
 
 const Sidebar = () => {
+    
+    const [filterCriteria, setFilterCriteria] = useState("All")
+    const dispatch = useDispatch();
+
+    const handleFilterCriteriaChange = (filterCriteria)=>{
+            console.log(filterCriteria)
+        // setFilterCriteria(filterCriteria);
+        // dispatch({type:filterCriteria});
+    }
+
+
+
     return (
         <>
         <div className={sidebarStyles.sidebarGradient}>
@@ -13,14 +28,34 @@ const Sidebar = () => {
 
       <div className={sidebarStyles.sidebarWhiteFirst}>
           <div>
-              <Pill text={"All"} orientation={"horizontal"}/>
-              <Pill text={"UI"} orientation={"horizontal"}/>  
-              <Pill text={"UX"} orientation={"horizontal"}/>  
+              <Pill 
+              text={"All"} 
+              orientation={"horizontal"} 
+              setFilterCriteria={handleFilterCriteriaChange}
+              />
+              <Pill 
+                text={"UI"} 
+                orientation={"horizontal"}
+                setFilterCriteria={handleFilterCriteriaChange}
+              />  
+              <Pill 
+                text={"UX"} 
+                orientation={"horizontal"}
+                setFilterCriteria={handleFilterCriteriaChange}
+              />  
           </div>
 
           <div>
-            <Pill text={"Enhancement"} orientation={"horizontal"}/>
-            <Pill text={"Bug"} orientation={"horizontal"} />  
+            <Pill 
+            text={"Enhancement"} 
+            orientation={"horizontal"}
+            setFilterCriteria={handleFilterCriteriaChange}
+            />
+            <Pill 
+            text={"Bug"} 
+            orientation={"horizontal"} 
+            setFilterCriteria={handleFilterCriteriaChange}
+            />  
           </div>
 
           <div>
