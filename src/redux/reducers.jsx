@@ -4,22 +4,46 @@ const initialState = {
 
 function reducer(state = initialState, action) {
 switch(action.type) {
-  case "Most Upvotes":
+  case "ALL":
     return {
-        sortingCriteria: "Most Upvotes"
+        sortingCriteria: "ALL"
     };
-    case "Least Upvotes":
+    case "UI":
+      return {
+          sortingCriteria: "UI"
+      };
+      case "UX":
         return {
-            sortingCriteria: "Least Upvotes"
+            sortingCriteria: "UX"
         };
-        case "Most Comments":
+        case "Enhancement":
+          return {
+              sortingCriteria: "Enhancement"
+          };
+      case "Bug":
         return {
-                sortingCriteria: "Most Comments"
+            sortingCriteria: "Bug"
         };
-        case "Least Comments":
+        case "Feature":
         return {
-                sortingCriteria: "Least Comments"
+            sortingCriteria: "Feature"
         };
+        case "Most Upvotes":
+            return {
+                    sortingCriteria: "Most Upvotes"
+            };
+        case "Least Upvotes":
+            return {
+                sortingCriteria: "Least Upvotes"
+            };
+            case "Most Comments":
+            return {
+                    sortingCriteria: "Most Comments"
+            };
+            case "Least Comments":
+            return {
+                    sortingCriteria: "Least Comments"
+            };
   default:
     return state;
   }

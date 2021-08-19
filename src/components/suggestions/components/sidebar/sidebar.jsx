@@ -10,9 +10,8 @@ const Sidebar = () => {
     const dispatch = useDispatch();
 
     const handleFilterCriteriaChange = (filterCriteria)=>{
-            console.log(filterCriteria)
-        // setFilterCriteria(filterCriteria);
-        // dispatch({type:filterCriteria});
+        setFilterCriteria(filterCriteria);
+        dispatch({type:filterCriteria});
     }
 
     return (
