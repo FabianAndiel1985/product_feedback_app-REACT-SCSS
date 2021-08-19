@@ -15,8 +15,6 @@ const Sidebar = () => {
         // dispatch({type:filterCriteria});
     }
 
-
-
     return (
         <>
         <div className={sidebarStyles.sidebarGradient}>
@@ -59,7 +57,11 @@ const Sidebar = () => {
           </div>
 
           <div>
-            <Pill text={"Feature"} orientation={"horizontal"}/>  
+            <Pill 
+            text={"Feature"} 
+            orientation={"horizontal"}
+            setFilterCriteria={handleFilterCriteriaChange}
+            />  
           </div>
             
       </div>
