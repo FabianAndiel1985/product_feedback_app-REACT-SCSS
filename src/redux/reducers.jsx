@@ -4,9 +4,9 @@ const initialState = {
 
 function reducer(state = initialState, action) {
 switch(action.type) {
-  case "ALL":
+  case "All":
     return {
-        sortingCriteria: "ALL"
+        sortingCriteria: "All"
     };
     case "UI":
       return {
@@ -44,8 +44,8 @@ switch(action.type) {
             return {
                     sortingCriteria: "Least Comments"
             };
-  default:
-    return state;
+            default:
+              return state;
   }
 }
 export default reducer;

@@ -1,3 +1,4 @@
+
 export const sortData = (sortingCriteria,data) => {
     if (sortingCriteria === "Most Upvotes" ) {
       return  [...data].sort((a,b)=>a.upvotes-b.upvotes).reverse();
@@ -12,7 +13,7 @@ export const sortData = (sortingCriteria,data) => {
         return sortTheComments(data,"descending")
     }
 
-    else if(sortingCriteria === "All" ||
+    else if(
             sortingCriteria === "UI" ||
             sortingCriteria === "UX" ||
             sortingCriteria === "Enhancement" ||
@@ -21,6 +22,12 @@ export const sortData = (sortingCriteria,data) => {
             ) {
          return data.filter((item)=>item.category.toLowerCase() === sortingCriteria.toLowerCase())
     }
+
+    else if(sortingCriteria === "All") {
+        return data;
+    }
+
+    
 }
 
 
@@ -33,4 +40,8 @@ const sortTheComments = (data,sorting)=>{
         return  [...withComments, ...withoutComments]
     }
     return  [...withoutComments,...withComments]
+}
+
+export const handleFilterCriteriaChange = (filterCriteria,dispatch)=>{
+    dispatch({type:filterCriteria});
 }

@@ -11,7 +11,7 @@ const Suggestions = () => {
     return (
         <div className={suggestionStyles.suggestionsContainer}>
             <div className={suggestionStyles.suggestionsContainer__sidebar}>
-                <Sidebar/>
+                <Sidebar data={productRequests}/>
             </div>
             <div className={suggestionStyles.suggestionsContainer__main}>
                 <Menubar data={productRequests.length}/>  
