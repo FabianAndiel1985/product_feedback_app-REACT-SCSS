@@ -31,11 +31,26 @@
     font-size: 2em;
     border-radius: var(--box-radius);
     font-size: 1.2em;
+
+    p{
+
+        @media only screen and (max-width: 462px) {
+            margin:0px 0px;
+        }
+    }
+
+    @media only screen and (max-width: 462px) {
+        border-radius: initial;
+        padding: 0.3em 1.5em 0.4em 1.5em;
+    }
 }
 
 .sidebarWhiteFirst {
     @include basicWhiteBoxStyles;
 
+    @media only screen and (max-width: 462px) {
+        display: none;
+    }
 }
 
 .sidebarWhiteSecond {
@@ -101,5 +116,9 @@
                 }
             }
             // END LI------
+        }
+
+        @media only screen and (max-width: 462px) {
+            display: none;
         }
 }

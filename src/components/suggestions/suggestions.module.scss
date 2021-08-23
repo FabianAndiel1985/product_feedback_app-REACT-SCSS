@@ -8,12 +8,35 @@
     position: relative;
 
     .suggestionsContainer__sidebar {
-        
+
+        @media only screen and (max-width: 1024px) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 462px) {
+            flex-direction: column;
+        }
+      
     }
 
     .suggestionsContainer__main {
         padding: 0em 0em 0em 5em;
         width:70%;
+
+        @media only screen and (max-width: 462px) {
+            width:100%;
+            padding: 0em 0em 0em 5em;
+        }
     }
 
+    @media only screen and (max-width: 1024px) {
+       flex-direction: column;
+       width:100%;
+      }
+
+      
+    @media only screen and (max-width: 428x) {
+        
+       }
 }
