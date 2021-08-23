@@ -17,6 +17,12 @@ switch(action.type) {
             sortingCriteria: "UX"
         };
         case "Enhancement":
+          console.log("Enh reached")
+          return {
+              sortingCriteria: "Enhancement"
+          };
+          case "enhancement":
+          console.log("Enh reache yqwdswd")
           return {
               sortingCriteria: "Enhancement"
           };
