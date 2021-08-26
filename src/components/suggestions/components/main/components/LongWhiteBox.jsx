@@ -14,13 +14,23 @@ const LongWhiteBox = ({title,description,category,upvotes,comments}) => {
         <div className={LongWhiteBoxStyles.LongWhiteBox}>
             <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem}>
                 <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter}>
-                        <Pill text={""} orientation={"vertical"} width={20}>
-                            <Counter number={upvotes}/>
-                        </Pill>
+                        
+                        <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter_pillTabletDesktop}>
+                            <Pill  text={""} orientation={"vertical"}>
+                                <Counter orientation={"vertical"} number={upvotes}/>
+                            </Pill>
+                        </div>
+
+                        <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter_pillMobile}>
+                            <Pill  text={""} orientation={"horizontal"}>
+                                <Counter orientation={"horizontal"} number={upvotes}/>
+                            </Pill>
+                        </div>
                 </div>
                 <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text}>
                     <h3 style={{margin:"0px"}}>{title}</h3>
                     <p style={{margin:"0.1em"}}>{description}</p>
+
                     <Pill text={category} orientation={"horizontal"}/>
                 </div>   
             </div>

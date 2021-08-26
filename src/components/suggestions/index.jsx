@@ -9,15 +9,13 @@ const Suggestions = () => {
     const {productRequests} = Data;
 
     return (
-        <div className={suggestionStyles.suggestionsContainer}>
-            <div className={suggestionStyles.suggestionsContainer__sidebar}>
-                <Sidebar data={productRequests}/>
-            </div>
-            <div className={suggestionStyles.suggestionsContainer__main}>
-                <Menubar data={productRequests.length}/>  
-                <Main data={productRequests}/>
-            </div>
-        </div> 
+    <>
+        <Sidebar data={productRequests}/>
+        <Menubar data={productRequests.length}/>
+        <Main data={productRequests}/>
+    </>
+
+        
     )
 }
 
