@@ -54,7 +54,9 @@
         @include sidebarBoxTablet;
     }
 
-
+    @media only screen and (min-width: 768px) {
+        margin: 0em auto;
+    }
 }
 
 .sidebarWhiteFirst {
@@ -66,8 +68,9 @@
 
     @media only screen and (min-width: 463px) {
         @include sidebarBoxTablet;
-        margin: 0em 1em;
+        margin: 1em auto;
     }
+
 }
 
 .sidebarWhiteSecond {
@@ -132,7 +135,6 @@
                     }
                 }
             }
-            // END LI------
         }
 
         @media only screen and (max-width: 462px) {
@@ -141,5 +143,9 @@
 
         @media only screen and (min-width: 463px) {
             @include sidebarBoxTablet;
+        }
+
+        @media only screen and (min-width: 768px) {
+            margin: 0em auto;
         }
 }
