@@ -1,3 +1,10 @@
+
+
+@mixin sidebarBoxTablet {
+    min-width: 180px;
+    width: 30%;
+}
+
 @mixin row {
     display: flex;
 }
@@ -42,6 +49,12 @@
         border-radius: initial;
         padding: 0.3em 1.5em 0.4em 1.5em;
     }
+
+    @media only screen and (min-width: 463px) {
+        @include sidebarBoxTablet;
+    }
+
+
 }
 
 .sidebarWhiteFirst {
@@ -49,6 +62,11 @@
 
     @media only screen and (max-width: 462px) {
         display: none;
+    }
+
+    @media only screen and (min-width: 463px) {
+        @include sidebarBoxTablet;
+        margin: 0em 1em;
     }
 }
 
@@ -119,5 +137,9 @@
 
         @media only screen and (max-width: 462px) {
             display: none;
+        }
+
+        @media only screen and (min-width: 463px) {
+            @include sidebarBoxTablet;
         }
 }
