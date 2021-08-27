@@ -14,8 +14,10 @@ const Suggestions = () => {
             <div className={suggestionStyles.sidebarContainer}>
                 <Sidebar data={productRequests}/>
             </div>
-            <Menubar data={productRequests.length}/>
-            <Main data={productRequests}/>
+            <div className={suggestionStyles.mainContainer}>
+                <Menubar data={productRequests.length}/>
+                <Main data={productRequests}/>
+            </div>
         </div>
     </>
 
