@@ -1,5 +1,12 @@
 .suggestionContainer{
+
+    // border:2px solid black;
+    // width:70%;
+    // margin: 0em auto;
+
    .sidebarContainer{
+          
+       
          @media only screen and (min-width: 463px) {
             display: flex;
             justify-content: space-between;
@@ -10,11 +17,14 @@
         @media only screen and (min-width: 768px) {
          flex-direction: column;
          justify-content: initial;
+         margin-left: auto;
      }
    }
-
+   
    .mainContainer{
-
+      @media only screen and (min-width: 768px) {
+        margin-right: auto;
+      }
    }
 
    @media only screen and (min-width: 768px) {
