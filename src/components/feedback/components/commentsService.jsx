@@ -8,7 +8,7 @@ export const createComments =
             if(comment && !comment.replies ) {
                 return(
                     <div>
-                        <Comment comment={comment}/>
+                        <Comment comment={comment} replyingTo={comment.replyingTo}/>
                         <hr/>
                     </div>
                 )
@@ -16,10 +16,10 @@ export const createComments =
 
             else if(comment && comment.replies && comment.replies.length >0) {
                 let replies = comment.replies;
+                console.log(replies)
                 return(
                     <div>
                         <Comment comment={comment}/>
-                        <p> I got a comment</p>
                         {createComments(replies)}
                     </div>
                 )

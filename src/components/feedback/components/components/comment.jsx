@@ -1,14 +1,14 @@
 import React from 'react';
 import * as CommentStyles from './comment.module.scss';
-
  
-function Comment({comment}) {
+function Comment({comment,replyingTo}) {
    
     const username = comment.user.name;
     const firstname= username.slice(0,username.indexOf(" "))
     
     return (
-        <div>
+        <div className={CommentStyles.comment}>
+            
             <div className={CommentStyles.firstRow}>
                                     
                 <div className={CommentStyles.firstRow_firstFlexItem}>
@@ -26,6 +26,9 @@ function Comment({comment}) {
             </div>
 
             <p>
+                <span>
+                    {replyingTo &&  "@"+replyingTo+" "}
+                </span>    
             {comment.content}
             </p>
 
