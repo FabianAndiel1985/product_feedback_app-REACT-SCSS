@@ -1,0 +1,13 @@
+.componentBasicStyles{
+    background-color: white;
+    
+    textarea{
+        display: block !important;
+        margin: 0em auto;
+    }
+
+    .componentBasicStyles_bottomRow{
+        display: flex;
+        justify-content: space-between;
+    }
+}

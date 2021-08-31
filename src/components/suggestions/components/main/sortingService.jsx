@@ -30,7 +30,7 @@ export const sortData = (sortingCriteria,data) => {
     
 }
 
-
+// sort the comments noch weiter zerlegen
 const sortTheComments = (data,sorting)=>{
     const withComments = data.filter((item)=>item.comments)
     const withoutComments = data.filter((item)=> !item.comments)

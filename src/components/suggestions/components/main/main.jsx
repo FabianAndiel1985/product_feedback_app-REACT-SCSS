@@ -23,6 +23,8 @@ const Main = ({data}) => {
                         category={request.category}
                         upvotes={request.upvotes}
                         comments={request.comments}
+                        linkFurther={true}
+                        id={request.id}
                     />
                 ))
                 :
