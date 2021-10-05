@@ -2,13 +2,19 @@ import Comment from "./components/comment";
 
 
 export const createComments = 
-(comments )=> {  return(
+(comments)=> {  
+    let lastIndex = comments.length-1; 
+
+    return(
         [...comments].map(comment=> {
+
+            let isLastComment = checkIfLast(comments,comment);
+
             if(comment && !comment.replies ) {
                 return(
                     <div style={comment.replyingTo ? {marginLeft:"80px"} : {}} >
                         <Comment comment={comment} replyingTo={comment.replyingTo}/>
-                            { !comment.replyingTo ? <hr/> : " "}
+                            { !comment.replyingTo && !isLastComment ? <hr/> : " "}
                     </div>
                 )
             }
@@ -26,4 +32,12 @@ export const createComments =
             }) 
         
         )
+}
+
+
+const checkIfLast = (comments,comment)=>{
+    if(comment.content === comments[comments.length-1].content) {
+        return true;
+    }
+    return false;
 }

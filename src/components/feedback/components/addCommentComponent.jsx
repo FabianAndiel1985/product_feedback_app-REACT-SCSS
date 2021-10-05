@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import * as addCommentComponentStyles from './addCommentComponent.module.scss';
+import Button from '../../shared/button';
 
 
 function AddCommentComponent() {
@@ -10,9 +11,9 @@ function AddCommentComponent() {
     return (
         <div className={addCommentComponentStyles.componentBasicStyles}>
 
-            <h4>
+            <h3>
                 Add Comment
-            </h4>
+            </h3>
 
             <textarea
                 onChange={e => setCharactersLeft(250-e.target.value.length)}
@@ -21,12 +22,12 @@ function AddCommentComponent() {
             </textarea>
 
             <div className={addCommentComponentStyles.componentBasicStyles_bottomRow}>       
-                <span>     
+                <div className={addCommentComponentStyles.componentBasicStyles_bottomRow_firstItem}>     
                     {charactersLeft} Characters left
-                </span>
-                <span>
-                    Post Comment
-                </span>
+                </div>
+                <Button
+                    text={"Post Comment"}
+                />
             </div>
 
         </div>

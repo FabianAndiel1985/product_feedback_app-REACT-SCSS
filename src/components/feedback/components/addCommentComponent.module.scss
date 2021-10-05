@@ -1,13 +1,28 @@
 .componentBasicStyles{
+    position: relative;
     background-color: white;
-    
-    textarea{
-        display: block !important;
-        margin: 0em auto;
-    }
+    border-radius: var(--box-radius);
+    padding: 1em 1em;
+    margin-top: 1.5em;
 
-    .componentBasicStyles_bottomRow{
-        display: flex;
-        justify-content: space-between;
-    }
+        h3 {
+           margin-top: 0em;
+        }
+    
+        textarea{
+            display: block !important;
+            width:100%;
+            min-height:90px;
+            margin-bottom: 1.2em ;
+        }
+
+        .componentBasicStyles_bottomRow{
+            display: flex;
+            justify-content: space-between;
+
+            .componentBasicStyles_bottomRow_firstItem{
+                display: inherit;
+                align-items: center;
+            }
+        }
 }

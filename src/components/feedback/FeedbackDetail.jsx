@@ -17,29 +17,32 @@ function FeedbackDetail() {
 
     return (
         <>
-            <div className={FeedbackDetailStyles.firstLine}>
-                <p> {leftArrow} Go Back</p> 
-                <CustomButton 
-                    text={"Edit Feedback"}
-                    color={"#4661E6"}
-                    hoverColor={"#c75af6"}
-                /> 
+            <div className={FeedbackDetailStyles.container}>
+
+                <div className={FeedbackDetailStyles.firstLine}>
+                    <p> {leftArrow} Go Back</p> 
+                    <CustomButton 
+                        text={"Edit Feedback"}
+                        color={"#4661E6"}
+                        hoverColor={"#c75af6"}
+                    /> 
+                </div>
+
+                <LongWhiteBox
+                    title={currentLesson.title}
+                    description={currentLesson.description}
+                    category={currentLesson.category}
+                    upvotes={currentLesson.upvotes}
+                    comments={currentLesson.comments}
+                    linkFurther={false}
+                    id={""}
+                />
+
+                <Comments comments={comments}/>
+
+                <AddComment/>
+                
             </div>
-
-            <LongWhiteBox
-                title={currentLesson.title}
-                description={currentLesson.description}
-                category={currentLesson.category}
-                upvotes={currentLesson.upvotes}
-                comments={currentLesson.comments}
-                linkFurther={false}
-                id={""}
-            />
-
-            <Comments comments={comments}/>
-
-            <AddComment/>
-
 
 
         </>

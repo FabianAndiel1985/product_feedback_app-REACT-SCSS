@@ -8,7 +8,7 @@ function Comment({comment,replyingTo}) {
     
     return (
         <div className={CommentStyles.comment}>
-            
+
             <div className={CommentStyles.firstRow}>
                                     
                 <div className={CommentStyles.firstRow_firstFlexItem}>

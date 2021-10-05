@@ -1,6 +1,9 @@
-.firstLine{
+.container{
+    padding:0em 1.7em;
 
-    display: flex;
-    justify-content: space-between;
-    
+    .firstLine{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
