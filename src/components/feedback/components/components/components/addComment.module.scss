@@ -1,0 +1,35 @@
+.addComment {
+    display: flex;
+    flex-direction: column;
+
+
+    
+    @media only screen and (min-width: 463px) {
+       flex-direction: row;
+       align-items: flex-start;
+    }
+
+    textarea {
+        display: block;
+        width:80%;
+        margin:0 auto;
+
+        @media only screen and (min-width: 463px) {
+            margin-right: 1rem;
+         }
+    }
+
+    button {
+        display: inline-block;
+        margin:1em auto 0 auto;
+        
+        @media only screen and (min-width: 463px) {
+            margin-top: 0;
+         }
+    }
+
+
+    
+
+
+}

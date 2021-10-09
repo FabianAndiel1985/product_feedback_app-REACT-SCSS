@@ -37,10 +37,11 @@ function FeedbackDetail() {
                     linkFurther={false}
                     id={""}
                 />
-
+                    
                 <Comments comments={comments}/>
 
-                <AddComment/>
+                <AddComment  show={false}
+                />
                 
             </div>
 

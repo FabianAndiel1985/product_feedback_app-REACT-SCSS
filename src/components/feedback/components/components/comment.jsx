@@ -1,5 +1,6 @@
 import React from 'react';
 import * as CommentStyles from './comment.module.scss';
+import AddComment from './components/addComment';
  
 function Comment({comment,replyingTo}) {
    
@@ -32,6 +33,7 @@ function Comment({comment,replyingTo}) {
             {comment.content}
             </p>
 
+            <AddComment/>
         </div>
     )
 }
