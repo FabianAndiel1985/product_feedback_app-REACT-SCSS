@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as CommentStyles from './comment.module.scss';
 import AddComment from './components/addComment';
  
@@ -6,6 +6,7 @@ function Comment({comment,replyingTo}) {
    
     const username = comment.user.name;
     const firstname= username.slice(0,username.indexOf(" "))
+    const [showAddComment, setShowAddComment] = useState(false)
     
     return (
         <div className={CommentStyles.comment}>
@@ -20,7 +21,9 @@ function Comment({comment,replyingTo}) {
                     </div>
                 </div>
 
-                <div className={CommentStyles.firstRow_secondFlexItem}>
+                <div className={CommentStyles.firstRow_secondFlexItem}
+                     onClick={()=>setShowAddComment((prevState)=>!prevState)}
+                >
                     <span>Reply</span>
                 </div>
                 
@@ -33,7 +36,7 @@ function Comment({comment,replyingTo}) {
             {comment.content}
             </p>
 
-            <AddComment/>
+            <AddComment show={showAddComment}/>
         </div>
     )
 }

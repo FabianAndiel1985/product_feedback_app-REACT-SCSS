@@ -3,10 +3,11 @@ import CustomButton from '../../../../shared/button'
 import * as addCommentStyles from "./addComment.module.scss"
 
 function AddComment({show}) {
-        
-
+      
     return (
         <>
+
+        {show &&
         <div 
         className={addCommentStyles.addComment}>   
                 <textarea
@@ -18,6 +19,7 @@ function AddComment({show}) {
                 hoverColor={"#c75af6"}
             />
         </div>
+        }
         </>
     )
     
