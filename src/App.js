@@ -5,14 +5,20 @@ import "./App.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import FeedbackDetail from "./components/feedback/FeedbackDetail";
-
-
+import NewFeedback from "./pages/newFeedback/newFeedback.page.jsx";
+import { Helmet } from "react-helmet";
 
 
 function App() {
 
   return (
       <BrowserRouter>
+      <Helmet>
+      <title>
+        Product-Feedback-App
+      </title>
+      <meta name="keywords" content="Feedback, Products, Comments" />
+      </Helmet>
         <Switch>
           <Provider store={store}>
             <Route path="/" exact>
@@ -21,11 +27,12 @@ function App() {
             <Route path="/feedback/:id" exact >
               <FeedbackDetail/>
             </Route>
+            <Route path="/new-feedback/" exact >
+              <NewFeedback/>
+            </Route>
           </Provider>
         </Switch>
       </BrowserRouter>
- 
-
   );
 }
 

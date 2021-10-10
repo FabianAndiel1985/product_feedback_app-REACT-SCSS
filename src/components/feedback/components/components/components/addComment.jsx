@@ -6,7 +6,6 @@ function AddComment({show}) {
       
     return (
         <>
-
         {show &&
         <div 
         className={addCommentStyles.addComment}>   
