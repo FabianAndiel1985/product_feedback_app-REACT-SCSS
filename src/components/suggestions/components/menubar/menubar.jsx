@@ -62,6 +62,7 @@ function Menubar({data}) {
                 text={"+ Add Feedback"}
                 color={"#ad1fea"}
                 hoverColor={"#c75af6"}
+                link={"/new-feedback"}
             />             
         </div>
     )

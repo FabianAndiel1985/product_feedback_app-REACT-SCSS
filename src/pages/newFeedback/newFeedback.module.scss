@@ -1,0 +1,19 @@
+.formContainer {
+    border:2px solid black;
+    .form{
+            .form__title {
+                display:block;
+                margin: 0 auto;
+            }
+
+            .form__category {
+                display:block;
+                margin: 0 auto;
+            }
+
+            .form__detail {
+                display:block;
+                margin: 0 auto;
+            }
+        }
+}

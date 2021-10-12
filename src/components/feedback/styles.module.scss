@@ -1,9 +1,12 @@
 .container{
-    padding:0em 1.7em;
+    padding: 0em 1.7em;
 
     .firstLine{
         display: flex;
         justify-content: space-between;
-    }
 
+        &__backlink{
+            cursor: pointer;
+        }
+    }
 }

@@ -3,9 +3,10 @@ import CustomButton from '../shared/button';
 import * as FeedbackDetailStyles from './styles.module.scss';
 import LongWhiteBox from '../suggestions/components/main/components/LongWhiteBox'
 import data from "../../assets/data.json";
-import {useParams} from 'react-router-dom'
+import {useParams,useHistory} from 'react-router-dom'
 import Comments from './components/commentsComponent';
 import AddComment from './components/addCommentComponent';
+
 
 function FeedbackDetail() {
 
@@ -14,13 +15,24 @@ function FeedbackDetail() {
     const productRequests= data.productRequests;
     const [currentLesson] = productRequests.filter((item)=>item.id === parseInt(id));
     const {comments} = currentLesson;
+    let history = useHistory();
+
+    const routeBack = ()=>{
+        history.goBack();
+    }
+
 
     return (
         <>
             <div className={FeedbackDetailStyles.container}>
 
                 <div className={FeedbackDetailStyles.firstLine}>
-                    <p> {leftArrow} Go Back</p> 
+                    <p 
+                    className={FeedbackDetailStyles.firstLine__backlink}
+                    onClick={routeBack}
+                    > 
+                        {leftArrow} Go Back
+                    </p> 
                     <CustomButton 
                         text={"Edit Feedback"}
                         color={"#4661E6"}

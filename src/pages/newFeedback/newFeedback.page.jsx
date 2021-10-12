@@ -1,7 +1,16 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
+import { useForm } from "react-hook-form";
+import * as newFeedbackStyles from "./newFeedback.module.scss";
+import Heading from "../../components/shared/heading.component";
+
 
 function NewFeedback() {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
+  console.log(watch("example")); // watch input value by passing the name of it
+
     return (
         <>
             <Helmet>
@@ -9,8 +18,39 @@ function NewFeedback() {
                     New Feedback
                 </title>
             </Helmet>
-            <div>
-                Im the new Feedback Page
+            <div 
+            className={newFeedbackStyles.formContainer}
+            >
+                <form
+                 className={newFeedbackStyles.form}
+                 onSubmit={handleSubmit(onSubmit)}
+                 >
+
+                <Heading 
+                    heading={"Im the best heading"}
+                    subtext={"im the sub"}
+                />        
+                <input 
+                className={newFeedbackStyles.form__title}
+                defaultValue="test" {...register("FeedbackTitle")} />
+
+                <select 
+                    {...register("FeedbackCategory")}
+                    className={newFeedbackStyles.form__category}
+                    >
+                    <option value="UI">UI</option>
+                    <option value="UX">UX</option>
+                    <option value="Enhancement">Enhancement</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Feature">Feature</option>
+                </select>
+
+                <textarea {...register("FeedbackDetail")}
+                    className={newFeedbackStyles.form__detail}
+                />
+                
+                <input type="submit" />
+                </form>
             </div>
         </>
     )
