@@ -1,69 +1,62 @@
-import React from 'react'
+import React from "react";
+import { useForm, FormProvider } from "react-hook-form";
+import Input from "../../components/shared/input.component.jsx";
 import { Helmet } from "react-helmet";
-import { useForm } from "react-hook-form";
 import * as newFeedbackStyles from "./newFeedback.module.scss";
 import Heading from "../../components/shared/heading.component";
-import Input from '../../components/shared/input.component';
-
 
 function NewFeedback() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const methods = useForm();
+  const { register, handleSubmit } = methods;
   const onSubmit = data => console.log(data);
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  const feedbackTitle = <Heading 
+  heading={"Feedback Title"}
+  subtext={"Add a short descriptive headline"}
+  />;
 
-    return (
-        <>
-            <Helmet>
+  const feedbackDetail = <Heading 
+  heading={"Feedback Detail"}
+  subtext={"Include any specific comments on what should be improved, added, etc."}
+  />; 
+
+
+  return (
+<>
+    <Helmet>
                 <title>
                     New Feedback
                 </title>
             </Helmet>
-            
-            <div 
-            className={newFeedbackStyles.formContainer}
-            >
-                <form
-                 className={newFeedbackStyles.form}
-                 onSubmit={handleSubmit(onSubmit)}
-                 >
 
-
-                
-                <Input
-                    heading={<Heading 
-                        heading={"Im the best heading"}
-                        subtext={"im the sub"}
-                    />}
-                    rows={2}           
-                />        
-                <input 
-                className={newFeedbackStyles.form__title}
-                defaultValue="test" {...register("FeedbackTitle")} />
-
-                <select 
-                    {...register("FeedbackCategory")}
-                    className={newFeedbackStyles.form__category}
-                    >
-                    <option value="UI">UI</option>
-                    <option value="UX">UX</option>
-                    <option value="Enhancement">Enhancement</option>
-                    <option value="Bug">Bug</option>
-                    <option value="Feature">Feature</option>
-                </select>
-
-                <textarea {...register("FeedbackDetail")}
-                    className={newFeedbackStyles.form__detail}
-                />
-                
-                <input type="submit" />
-                </form>
-            </div>
-        </>
-    )
+    <div 
+      className={newFeedbackStyles.formContainer}
+    >
+    <FormProvider {...methods}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input
+        heading={feedbackTitle}
+        rows={2} 
+        type={"textarea"}
+        />
+        <Input
+        heading={feedbackDetail}
+        type={"select"}
+        />
+         <Input
+        heading={feedbackDetail}
+        rows={4} 
+        type={"textarea"}
+        />
+        <input type="submit" />
+      </form>
+    </FormProvider>
+    </div>  
+    </>
+  );
 }
 
 
 
-
 export default NewFeedback;
+  
