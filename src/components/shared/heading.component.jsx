@@ -5,11 +5,13 @@ function Heading({heading,subtext}) {
     return (
         <div>
             <h5
-            className={headingStyles.heading}
+                className={headingStyles.headingtext}
             >
             {heading}
             </h5>
-            <p>
+            <p
+                className={headingStyles.subtext}
+            >
             {subtext}
             </p>
         </div>

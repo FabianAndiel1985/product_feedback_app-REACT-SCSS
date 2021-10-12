@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import * as newFeedbackStyles from "./newFeedback.module.scss";
 import Heading from "../../components/shared/heading.component";
+import Input from '../../components/shared/input.component';
 
 
 function NewFeedback() {
@@ -18,6 +19,7 @@ function NewFeedback() {
                     New Feedback
                 </title>
             </Helmet>
+            
             <div 
             className={newFeedbackStyles.formContainer}
             >
@@ -26,9 +28,14 @@ function NewFeedback() {
                  onSubmit={handleSubmit(onSubmit)}
                  >
 
-                <Heading 
-                    heading={"Im the best heading"}
-                    subtext={"im the sub"}
+
+                
+                <Input
+                    heading={<Heading 
+                        heading={"Im the best heading"}
+                        subtext={"im the sub"}
+                    />}
+                    rows={2}           
                 />        
                 <input 
                 className={newFeedbackStyles.form__title}
