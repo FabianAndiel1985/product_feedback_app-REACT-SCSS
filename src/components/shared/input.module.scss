@@ -1,11 +1,22 @@
+@import "../../constants/_variables.scss";
 .container{
-    width:500px;
+    width:100%;
     position:relative;
+    margin-top: 1.3em;
+    
     .customInput{
         margin-top: 0.8em;
         border:none;
         background-color: #F2F4FF;
         resize: none;
         width:100%;
+        &:hover{
+            border: 1.5px solid $darkBlueColor;
+        }
     }
+}
+
+select {
+    height:30.04px;
+    padding:2px;
 }

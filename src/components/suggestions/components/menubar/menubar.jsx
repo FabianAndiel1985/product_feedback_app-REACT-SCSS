@@ -3,6 +3,7 @@ import CustomButton from "../../../shared/button";
 import CustomDropdown from "./components/CustomDropdown";
 import { useState } from "react";
 import { useSelector, useDispatch} from 'react-redux'
+import {brightVioletColor} from "../../../../constants/color-constants";
 
 function Menubar({data}) {
 
@@ -60,7 +61,7 @@ function Menubar({data}) {
             
             <CustomButton 
                 text={"+ Add Feedback"}
-                color={"#ad1fea"}
+                color={brightVioletColor}
                 hoverColor={"#c75af6"}
                 link={"/new-feedback"}
             />             

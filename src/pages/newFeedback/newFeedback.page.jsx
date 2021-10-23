@@ -4,16 +4,28 @@ import Input from "../../components/shared/input.component.jsx";
 import { Helmet } from "react-helmet";
 import * as newFeedbackStyles from "./newFeedback.module.scss";
 import Heading from "../../components/shared/heading.component";
+import CustomButton from "../../components/shared/button.jsx";
+import {brightVioletColor,darkBlueColor, hooverDarkBlue} from "../../constants/color-constants";
+import CircleSymbol from "../../components/shared/circleSymbol.jsx";
+import { FaPlus } from 'react-icons/fa';
+
+
 
 function NewFeedback() {
   const methods = useForm();
-  const { register, handleSubmit } = methods;
+  const { handleSubmit } = methods;
   const onSubmit = data => console.log(data);
 
   const feedbackTitle = <Heading 
   heading={"Feedback Title"}
   subtext={"Add a short descriptive headline"}
   />;
+
+  const feedbackCategory = <Heading 
+  heading={"Category"}
+  subtext={"Choose a category for a feedback"}
+  />; 
+
 
   const feedbackDetail = <Heading 
   heading={"Feedback Detail"}
@@ -24,31 +36,54 @@ function NewFeedback() {
   return (
 <>
     <Helmet>
-                <title>
-                    New Feedback
-                </title>
-            </Helmet>
+      <title>
+        New Feedback
+      </title>
+    </Helmet>
 
     <div 
       className={newFeedbackStyles.formContainer}
     >
+    
+    <CircleSymbol
+      symbol={<FaPlus/>}
+    />
+
+      <h2>Create new Feedback</h2>
+
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
         heading={feedbackTitle}
+        name={"title"}
         rows={2} 
         type={"textarea"}
         />
         <Input
-        heading={feedbackDetail}
+        heading={feedbackCategory}
+        name={"category"}
         type={"select"}
         />
+
+        {/* ab hier weiter die Kategorie fortsetenb */}
          <Input
         heading={feedbackDetail}
+        name={"detail"}
         rows={4} 
         type={"textarea"}
         />
-        <input type="submit" />
+        <div className={newFeedbackStyles.formButtonRow}>
+          <CustomButton
+          text={"Cancel"}
+          color={darkBlueColor}
+          hoverColor={hooverDarkBlue}
+          />
+          <CustomButton
+          text={"Save Changes"}
+          color={brightVioletColor}
+          type={"submit"}
+          />
+        </div>
       </form>
     </FormProvider>
     </div>  

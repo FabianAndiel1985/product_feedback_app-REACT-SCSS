@@ -2,7 +2,7 @@ import React from 'react'
 import * as inputStyles from "./input.module.scss";
 import { useFormContext } from "react-hook-form";
 
-function Input({rows,heading,type}) {
+function Input({rows,heading,type,name}) {
     const methods = useFormContext();
 
     if(type==="textarea") {
@@ -10,10 +10,11 @@ function Input({rows,heading,type}) {
             <>
                 <div
                 className={inputStyles.container}
+                
                 >
                     {heading}
                     <textarea
-                    {...methods.register("shalalal")} 
+                    {...methods.register(name)} 
                     className={inputStyles.customInput}
                     rows = {rows}
                     />
@@ -33,17 +34,15 @@ function Input({rows,heading,type}) {
                     <select 
                     name="pets" 
                     id="pet-select"
-                    {...methods.register("shalalal")} 
+                    {...methods.register(name)} 
                     className={inputStyles.customInput}
                     rows = {rows}
                     >
-                        <option value="">--Please choose an option--</option>
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="hamster">Hamster</option>
-                        <option value="parrot">Parrot</option>
-                        <option value="spider">Spider</option>
-                        <option value="goldfish">Goldfish</option>
+                        <option value="Feature">Feature</option>
+                        <option value="UI">UI</option>
+                        <option value="UX">UX</option>
+                        <option value="Enhancement">Enhancement</option>
+                        <option value="Bug">Bug</option>
                     </select>                    
                 </div>
             </>

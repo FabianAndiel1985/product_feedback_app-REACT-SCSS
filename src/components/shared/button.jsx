@@ -3,7 +3,7 @@ import { useHistory} from "react-router-dom";
 import * as customButtonStyles from "./button.module.scss";
 
 
-function CustomButton({text,color,hoverColor,link}) {
+function CustomButton({text,color,hoverColor,link,type}) {
     
     const [bgColor, setBgColor] = useState(color)
     let history = useHistory()
@@ -27,6 +27,7 @@ function CustomButton({text,color,hoverColor,link}) {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={link && routeFurther}
+            type={type && type}
         >
             {text}
         </button>
