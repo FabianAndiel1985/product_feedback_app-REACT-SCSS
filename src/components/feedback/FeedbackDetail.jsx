@@ -6,6 +6,7 @@ import data from "../../assets/data.json";
 import {useParams,useHistory} from 'react-router-dom'
 import Comments from './components/commentsComponent';
 import AddComment from './components/addCommentComponent';
+import RouteBack from '../shared/routeBack.component';
 
 
 function FeedbackDetail() {
@@ -15,24 +16,13 @@ function FeedbackDetail() {
     const productRequests= data.productRequests;
     const [currentLesson] = productRequests.filter((item)=>item.id === parseInt(id));
     const {comments} = currentLesson;
-    let history = useHistory();
-
-    const routeBack = ()=>{
-        history.goBack();
-    }
-
-
+ 
     return (
         <>
             <div className={FeedbackDetailStyles.container}>
 
                 <div className={FeedbackDetailStyles.firstLine}>
-                    <p 
-                    className={FeedbackDetailStyles.firstLine__backlink}
-                    onClick={routeBack}
-                    > 
-                        {leftArrow} Go Back
-                    </p> 
+                    <RouteBack/>
                     <CustomButton 
                         text={"Edit Feedback"}
                         color={"#4661E6"}

@@ -5,10 +5,13 @@
     padding: 2em 1em;
     position: relative;
 
+    @media only screen and (min-width: 462px) {
+        width:450px;
+    }
+
 
 
     form{
-
         .formButtonRow{
             display:flex;
             justify-content: end;
