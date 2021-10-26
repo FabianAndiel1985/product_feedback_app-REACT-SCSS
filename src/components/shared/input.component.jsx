@@ -5,20 +5,24 @@ import { useFormContext } from "react-hook-form";
 function Input({rows,heading,type,name}) {
     const methods = useFormContext();
 
+    const { formState: { errors }} = methods;
+
+
     if(type==="textarea") {
         return (
             <>
                 <div
                 className={inputStyles.container}
-                
                 >
                     {heading}
                     <textarea
-                    {...methods.register(name)} 
+                    {...methods.register(name,{ required: true })} 
                     className={inputStyles.customInput}
                     rows = {rows}
                     />
+                    {errors && "Last name is required"}
                 </div>
+
             </>
         )
     }
