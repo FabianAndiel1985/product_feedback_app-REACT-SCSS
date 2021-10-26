@@ -1,15 +1,19 @@
-.formContainer {
-    background-color: white;
+.contentContainer{
     width: 310px;
-    margin: 4em auto;
-    padding: 2em 1em;
-    position: relative;
-
+    margin: 1.65em auto;
+    p{
+        &:first-child{
+            margin-bottom: 65px;
+        }
+    }
     @media only screen and (min-width: 462px) {
         width:450px;
     }
 
-
+.formContainer {
+    background-color: white;    
+    padding: 2em 1em;
+    position: relative;
 
     form{
         .formButtonRow{
@@ -21,4 +25,6 @@
             }
         }
     }
+}
+
 }

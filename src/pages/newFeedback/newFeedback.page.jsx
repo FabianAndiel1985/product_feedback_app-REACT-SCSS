@@ -8,6 +8,7 @@ import CustomButton from "../../components/shared/button.jsx";
 import {brightVioletColor,darkBlueColor, hooverDarkBlue} from "../../constants/color-constants";
 import CircleSymbol from "../../components/shared/circleSymbol.jsx";
 import { FaPlus } from 'react-icons/fa';
+import RouteBack from "../../components/shared/routeBack.component.jsx";
 
 
 
@@ -40,7 +41,13 @@ function NewFeedback() {
         New Feedback
       </title>
     </Helmet>
+    
+    <div
+      className={newFeedbackStyles.contentContainer}
+    >
 
+    <RouteBack/>
+    
     <div 
       className={newFeedbackStyles.formContainer}
     >
@@ -86,6 +93,7 @@ function NewFeedback() {
         </div>
       </form>
     </FormProvider>
+    </div>
     </div>  
     </>
   );
