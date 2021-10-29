@@ -1,3 +1,5 @@
+@import "../../../constants/_variables.scss";
+
 .componentBasicStyles{
     position: relative;
     background-color: white;
@@ -9,12 +11,27 @@
            margin-top: 0em;
         }
     
-        textarea{
+        .commentArea {
+        
             display: block !important;
             width:100%;
             min-height:90px;
             margin-bottom: 1.2em ;
+            margin-top: 0.8em;
+            border:none;
+            background-color: #F2F4FF;
+            resize: none;
+            &:hover{
+                border: 1.5px solid $darkBlueColor;
+            }
         }
+
+        
+           
+            
+        
+
+
 
         .componentBasicStyles_bottomRow{
             display: flex;

@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomButton from '../../../../shared/button'
 import * as addCommentStyles from "./addComment.module.scss"
+import Input from '../../../../shared/input.component'
 
 function AddComment({show}) {
       
@@ -15,7 +16,6 @@ function AddComment({show}) {
             <CustomButton
                 text= {"Post Reply"}
                 color={"#4661E6"}
-                hoverColor={"#c75af6"}
             />
         </div>
         }

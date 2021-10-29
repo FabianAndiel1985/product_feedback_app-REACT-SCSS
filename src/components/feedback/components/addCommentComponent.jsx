@@ -16,6 +16,7 @@ function AddCommentComponent() {
             </h3>
 
             <textarea
+                className={addCommentComponentStyles.commentArea}
                 onChange={e => setCharactersLeft(250-e.target.value.length)}
             >
                 Type your comment here
