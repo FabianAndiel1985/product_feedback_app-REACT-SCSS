@@ -18,10 +18,13 @@
    }
    
    .mainContainer{
-
+      padding: 0em 1em !important;
+     
       @media only screen and (min-width: 768px) {
         margin-right: auto;
         width: 800px;
+        
+      padding: 0em 1em !important;
       }
    }
 
