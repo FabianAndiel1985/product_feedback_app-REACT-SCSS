@@ -40,17 +40,17 @@
     font-size: 1.2em;
 
     p{
-        @media only screen and (max-width: 462px) {
+        @media only screen and (max-width: 612px) {
             margin:0px 0px;
         }
     }
 
-    @media only screen and (max-width: 462px) {
+    @media only screen and (max-width: 612px) {
         border-radius: initial;
         padding: 0.3em 1.5em 0.4em 1.5em;
     }
 
-    @media only screen and (min-width: 463px) {
+    @media only screen and (min-width: 613px) {
         @include sidebarBoxTablet;
     }
 
@@ -62,11 +62,11 @@
 .sidebarWhiteFirst {
     @include basicWhiteBoxStyles;
 
-    @media only screen and (max-width: 462px) {
+    @media only screen and (max-width: 612px) {
         display: none;
     }
 
-    @media only screen and (min-width: 463px) {
+    @media only screen and (min-width: 613px) {
         @include sidebarBoxTablet;
         margin: 1em auto;
     }
@@ -137,11 +137,11 @@
             }
         }
 
-        @media only screen and (max-width: 462px) {
+        @media only screen and (max-width: 612px) {
             display: none;
         }
 
-        @media only screen and (min-width: 463px) {
+        @media only screen and (min-width: 613px) {
             @include sidebarBoxTablet;
         }
 
