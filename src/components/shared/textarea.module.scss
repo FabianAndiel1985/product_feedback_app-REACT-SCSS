@@ -1,0 +1,17 @@
+@import "../../constants/variables";
+
+.textarea{
+
+    display: block !important;
+    width:100%;
+    min-height:90px;
+    margin-bottom: 1.2em ;
+    margin-top: 0.8em;
+    border:none;
+    background-color: #F2F4FF;
+    resize: none;
+    &:hover{
+        border: 1.5px solid $darkBlueColor;
+    }
+
+}
