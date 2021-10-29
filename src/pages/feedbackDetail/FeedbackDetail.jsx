@@ -26,7 +26,6 @@ function FeedbackDetail() {
                     <CustomButton 
                         text={"Edit Feedback"}
                         color={"#4661E6"}
-                        hoverColor={"#c75af6"}
                     /> 
                 </div>
 
