@@ -30,7 +30,7 @@ const Sidebar = ({data}) => {
         </div>
 
       <div className={sidebarStyles.sidebarWhiteFirst}>
-          <div>
+       
               <Pill 
               text={"All"} 
               orientation={"horizontal"} 
@@ -46,9 +46,8 @@ const Sidebar = ({data}) => {
                 orientation={"horizontal"}
                 setFilterCriteria={handleFilterCriteriaChange}
               />  
-          </div>
+      
 
-          <div>
             <Pill 
             text={"Enhancement"} 
             orientation={"horizontal"}
@@ -59,16 +58,11 @@ const Sidebar = ({data}) => {
             orientation={"horizontal"} 
             setFilterCriteria={handleFilterCriteriaChange}
             />  
-          </div>
-
-          <div>
             <Pill 
             text={"Feature"} 
             orientation={"horizontal"}
             setFilterCriteria={handleFilterCriteriaChange}
             />  
-          </div>
-            
       </div>
       
       

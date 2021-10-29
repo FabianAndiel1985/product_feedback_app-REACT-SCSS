@@ -3,13 +3,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0.6em 0.6em 0.7em 0.6em;
-    margin: 1.4em 0em;
+    margin: 1.4em 0.8em;
     background-color: var(--box-background);
     border-radius: var(--box-radius);
 
-    @media only screen and (max-width: 461px) {
-        margin: 1.4em 1em;
-    }
 
     .LongWhiteBox__firstFlexItem{
         display: inherit;
