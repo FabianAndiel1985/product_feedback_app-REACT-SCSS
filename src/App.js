@@ -4,7 +4,7 @@ import Suggestions from "./components/suggestions/index";
 import "./App.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import FeedbackDetail from "./components/feedback/FeedbackDetail";
+import FeedbackDetail from "./pages/feedbackDetail/FeedbackDetail";
 import NewFeedback from "./pages/newFeedback/newFeedback.page.jsx";
 import { Helmet } from "react-helmet";
 

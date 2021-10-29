@@ -1,12 +1,12 @@
 import React from 'react'
-import CustomButton from '../shared/button';
+import CustomButton from '../../components/shared/button';
 import * as FeedbackDetailStyles from './styles.module.scss';
-import LongWhiteBox from '../suggestions/components/main/components/LongWhiteBox'
+import LongWhiteBox from '../../components/suggestions/components/main/components/LongWhiteBox'
 import data from "../../assets/data.json";
 import {useParams,useHistory} from 'react-router-dom'
-import Comments from './components/commentsComponent';
-import AddComment from './components/addCommentComponent';
-import RouteBack from '../shared/routeBack.component';
+import Comments from '../../components/feedback/components/commentsComponent';
+import AddComment from '../../components/feedback/components/addCommentComponent';
+import RouteBack from '../../components/shared/routeBack.component';
 
 
 function FeedbackDetail() {

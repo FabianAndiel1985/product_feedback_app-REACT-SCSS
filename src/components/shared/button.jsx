@@ -9,7 +9,9 @@ function CustomButton({text,color,hoverColor,link,type}) {
     let history = useHistory()
     
     const handleMouseEnter= ()=>{
-        setBgColor(hoverColor)
+        if (hoverColor) {
+            setBgColor(hoverColor)
+        }
     }
 
     const handleMouseLeave= ()=>{
