@@ -7,6 +7,11 @@ function Input({rows,heading,type,name}) {
 
     const { formState: { errors }} = methods;
 
+    let warningMessage =  null;
+    
+    if(name in errors && errors[name].type === "required" ) {
+        warningMessage =   `Feedback ${name} can\`t be empty`;
+    }
 
     if(type==="textarea") {
         return (
@@ -20,7 +25,12 @@ function Input({rows,heading,type,name}) {
                     className={inputStyles.customInput}
                     rows = {rows}
                     />
-                    {errors && "Last name is required"}
+                    <span
+                     className={inputStyles.warningMessage}
+                    >
+                        {warningMessage}
+                    </span>
+
                 </div>
 
             </>
