@@ -69,6 +69,7 @@ const Sidebar = ({data}) => {
       {occurences &&
       
       <div className={sidebarStyles.sidebarWhiteSecond}> 
+            
             <div> 
                     <span>Roadmap</span> 
                     <a href="">View</a>

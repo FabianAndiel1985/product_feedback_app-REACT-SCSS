@@ -1,8 +1,14 @@
+@import "../../../../constants/_variables";
+
+@mixin hideSidebarBoxCellphone {
+    display:none;
+}
 
 
 @mixin sidebarBoxTablet {
     min-width: 180px;
     width: 30%;
+    margin: 1em 0em;
 }
 
 @mixin row {
@@ -40,38 +46,46 @@
     font-size: 1.2em;
 
     p{
-        @media only screen and (max-width: 612px) {
-            margin:0px 0px;
+        @media only screen and (max-width: $mq-phone-max) {
+            margin:0px;
         }
     }
 
-    @media only screen and (max-width: 612px) {
+    @media only screen and (max-width: $mq-phone-max) {
         border-radius: initial;
         padding: 0.3em 1.5em 0.4em 1.5em;
+        margin:0px;
     }
 
-    @media only screen and (min-width: 613px) {
+    @media only screen and (min-width: $mq-tablet-min) {
         @include sidebarBoxTablet;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $mq-computer-min) {
         margin: 0.8em auto;
     }
 }
 
+// ============sidebar Gradient end
+
+
+
 .sidebarWhiteFirst {
     @include basicWhiteBoxStyles;
 
-    @media only screen and (max-width: 612px) {
-        display: none;
+    @media only screen and (max-width: $mq-phone-max) {
+        @include hideSidebarBoxCellphone()
     }
 
-    @media only screen and (min-width: 613px) {
+    @media only screen and (min-width: $mq-tablet-min) {
         @include sidebarBoxTablet;
-        margin: 1em auto;
+       
     }
-
 }
+
+// ============sidebar white frist end
+
+
 
 .sidebarWhiteSecond {
     @include basicWhiteBoxStyles;
@@ -98,7 +112,7 @@
                     
                     &::before {
                         @include individualBulletPoint(#F49F85);
-                    }
+                    
 
                    span{
                         &:nth-child(2){
@@ -137,15 +151,20 @@
             }
         }
 
-        @media only screen and (max-width: 612px) {
-            display: none;
-        }
-
-        @media only screen and (min-width: 613px) {
+        @media only screen and (min-width: $mq-tablet-min) {
             @include sidebarBoxTablet;
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $mq-computer-min) {
             margin: 0em auto;
         }
+    }
+
+    @media only screen and (min-width: $mq-tablet-min) {
+        @include sidebarBoxTablet;
+    }
+
+    @media only screen and (max-width: $mq-phone-max) {
+        @include hideSidebarBoxCellphone();
+    }
 }
