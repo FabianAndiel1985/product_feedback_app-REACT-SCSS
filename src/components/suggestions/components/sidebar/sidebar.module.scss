@@ -4,12 +4,17 @@
     display:none;
 }
 
-
 @mixin sidebarBoxTablet {
     min-width: 180px;
     width: 30%;
     margin: 1em 0em;
+
 }
+
+@mixin sidebarBoxPC {
+    margin: 0.8em 1.2em 0em auto;
+}
+
 
 @mixin row {
     display: flex;
@@ -61,8 +66,8 @@
         @include sidebarBoxTablet;
     }
 
-    @media only screen and (min-width: $mq-computer-min) {
-        margin: 0.8em auto;
+    @media only screen and (min-width: 768px) {
+        @include sidebarBoxPC();
     }
 }
 
@@ -79,12 +84,16 @@
 
     @media only screen and (min-width: $mq-tablet-min) {
         @include sidebarBoxTablet;
-       
+    
     }
+
+    @media only screen and (min-width: 768px) {
+        @include sidebarBoxPC();
+    }
+
 }
 
 // ============sidebar white frist end
-
 
 
 .sidebarWhiteSecond {
@@ -151,20 +160,23 @@
             }
         }
 
-        @media only screen and (min-width: $mq-tablet-min) {
-            @include sidebarBoxTablet;
-        }
 
-        @media only screen and (min-width: $mq-computer-min) {
+   
+
+        @media only screen and (min-width: 768px) {
             margin: 0em auto;
         }
     }
 
+    @media only screen and (max-width: $mq-phone-max) {
+        @include hideSidebarBoxCellphone();
+    }
+    
     @media only screen and (min-width: $mq-tablet-min) {
         @include sidebarBoxTablet;
     }
 
-    @media only screen and (max-width: $mq-phone-max) {
-        @include hideSidebarBoxCellphone();
+    @media only screen and (min-width: 768px) {
+        @include sidebarBoxPC();
     }
 }
