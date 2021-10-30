@@ -1,34 +1,33 @@
-.suggestionContainer{
+@import "../../constants/_variables.scss";
 
+.suggestionContainer{
 
    .sidebarContainer{
       
-         @media only screen and (min-width: 463px) {
+         @media only screen and (min-width: $mq-tablet-min) {
             display: flex;
             justify-content: space-between;
             margin-bottom: 2em;
             padding:0em 1.2em;
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $mq-computer-min) {
          flex-direction: column;
          justify-content: initial;
          margin-left: auto;
+         width:250px;
      }
    }
    
    .mainContainer{
-      padding: 0em 1em !important;
-     
-      @media only screen and (min-width: 768px) {
+
+      @media only screen and (min-width: $mq-computer-min) {
         margin-right: auto;
         width: 800px;
-        
-      padding: 0em 1em !important;
       }
    }
 
-   @media only screen and (min-width: 768px) {
+   @media only screen and (min-width: $mq-computer-min) {
       display: flex;
   }
 
