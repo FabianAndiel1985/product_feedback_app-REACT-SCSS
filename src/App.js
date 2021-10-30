@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-import Suggestions from "./components/suggestions/index";
+import Suggestions from "./pages/index/index";
 import "./App.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";

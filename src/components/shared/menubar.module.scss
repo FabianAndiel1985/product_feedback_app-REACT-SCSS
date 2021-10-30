@@ -1,0 +1,23 @@
+@import "../../constants/_variables";
+
+
+.firstSection{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0.5em 1.3em 0.5em 1.5em;
+    color:white;
+    background-color: $darkBlueColor;
+    border-radius: none;
+
+    div{
+        display: flex;
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 613px) {
+        margin:1em 1.2em;
+        border-radius: var(--box-radius);
+        
+    }
+}

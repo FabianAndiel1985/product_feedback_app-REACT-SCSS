@@ -2,7 +2,7 @@ import React from 'react'
 import Main from '../../components/suggestions/components/main/main'
 import Sidebar from '../../components/suggestions/components/sidebar/sidebar';
 import * as suggestionStyles from './styles.module.scss';
-import Menubar from '../../components/suggestions/components/menubar/menubar';
+import Menubar from '../../components/suggestions/components/menubar/menubarSuggestions.component';
 import Data from "../../assets/data.json";
 
 const Suggestions = () => {
