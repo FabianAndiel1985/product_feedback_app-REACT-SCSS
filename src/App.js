@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Suggestions from "./pages/index/index";
 import "./App.css";
@@ -6,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import FeedbackDetail from "./pages/feedbackDetail/FeedbackDetail";
 import NewFeedback from "./pages/newFeedback/newFeedback.page.jsx";
+import Roadmap from "./pages/roadmap/roadmap.page";
 import { Helmet } from "react-helmet";
 
 
@@ -29,6 +29,9 @@ function App() {
             </Route>
             <Route path="/new-feedback/" exact >
               <NewFeedback/>
+            </Route>
+            <Route path="/roadmap/" exact >
+              <Roadmap/>
             </Route>
           </Provider>
         </Switch>

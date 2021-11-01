@@ -1,0 +1,28 @@
+.roadmapContainer{
+width:1200px;
+margin: 0em auto;
+border:2px solid black;
+
+    .menuHeadingElements{
+        display: flex;
+        flex-direction: column;
+
+        .menuHeading{
+            font-weight: bold;
+        }
+    }
+
+    .gridContainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin:0 1.2em;
+
+        & > *{
+            border:2px solid black;
+            padding: 2em;
+        }
+
+    }
+
+}
