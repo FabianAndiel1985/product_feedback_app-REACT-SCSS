@@ -14,9 +14,17 @@ border:2px solid black;
 
     .gridContainer{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        margin:0 1.2em;
+            margin:0 1.2em;
+         grid-template-columns: repeat(auto,1fr);
+        grid-template-rows: repeat(auto,20px);   
+
+
+        // Fall für 3 geteilte Spalte
+        // größerer Viewport
+        
+        // grid-template-columns: repeat(3,1fr);
+        // grid-template-rows: repeat(auto,20px);
+    
 
         & > *{
             border:2px solid black;

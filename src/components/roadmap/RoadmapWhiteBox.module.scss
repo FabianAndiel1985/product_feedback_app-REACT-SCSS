@@ -1,0 +1,89 @@
+$stripe_height:5px;
+
+
+.LongWhiteBox{
+    display: flex;
+    flex-direction: column;
+    padding: 0em 0.6em 0.7em 0.6em;
+    margin: 1.4em 0.8em;
+    background-color: var(--box-background);
+    border-radius: var(--box-radius);
+    overflow: hidden;
+
+    .colorStripe_live{
+        height: $stripe_height;
+        background-color:#62BCFA;
+    }
+
+    .colorStripe_planned{
+        height:$stripe_height;
+        background-color:#F49F85;
+    }
+
+    .colorStripe_inProgress{
+        height:$stripe_height;
+        background-color: #AD1FEA;
+    }
+
+
+    .LongWhiteBox__firstFlexItem{
+        display: inherit;
+        flex-direction: column;
+
+        .LongWhiteBox__firstFlexItem__counter{
+            position: relative;
+            display: flex;
+            order:1;
+                .LongWhiteBox__firstFlexItem__counter_pillTabletDesktop {
+                    
+                    @media only screen and (max-width: 461px) {
+                        display:none;
+                    }
+
+                    @media only screen and (min-width: 462px) {
+                        display:initial;
+                        order:initial;
+                    }
+                }
+
+                .LongWhiteBox__firstFlexItem__counter_pillMobile{
+                    @media only screen and (min-width: 462px) {
+                        display:none;
+                    }
+                }
+
+          @media only screen and (min-width: 462px) {
+            flex-direction: row;
+            order:0;
+            margin-right: 0.8em;
+          }
+         }
+
+        .LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text{
+            p {
+                margin: 0.1em 0em !important;
+            }
+            @media only screen and (min-width: 462px) {
+              
+            }
+        }
+
+        @media only screen and (min-width: 462px) {
+            flex-direction: row;
+        }
+    }
+
+    .LongWhiteBox__secondFlexItem{
+        display: inherit;
+        align-items:flex-end;
+        .LongWhiteBox__secondFlexItem__container{
+            display: inherit;
+            flex-direction: row;
+
+            div{
+                margin-left: 0.5em;
+            }
+        }
+    }   
+
+}
