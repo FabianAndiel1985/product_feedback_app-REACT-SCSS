@@ -97,8 +97,9 @@
 
 
 .sidebarWhiteSecond {
-    @include basicWhiteBoxStyles;
 
+    @include basicWhiteBoxStyles;
+   
         div {
             display:flex;
             justify-content: space-between;
@@ -164,16 +165,18 @@
         @media only screen and (min-width: 768px) {
             margin: 0em auto;
         }
+        @media only screen and (max-width: $mq-phone-max) {
+            @include hideSidebarBoxCellphone();
+        }
+    
+        @media only screen and (min-width: $mq-tablet-min) {
+            @include sidebarBoxTablet;
+        }
+    
+        @media only screen and (min-width: 768px) {
+            @include sidebarBoxPC();
+        }
+    
     }
 
-    @media only screen and (max-width: $mq-phone-max) {
-        @include hideSidebarBoxCellphone();
-    }
-
-    @media only screen and (min-width: $mq-tablet-min) {
-        @include sidebarBoxTablet;
-    }
-
-    @media only screen and (min-width: 768px) {
-        @include sidebarBoxPC();
-    }
+    

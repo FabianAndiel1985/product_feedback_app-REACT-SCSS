@@ -3,6 +3,8 @@ import Comment from "./components/comment";
 
 export const createComments = 
 (comments)=> {  
+
+    
     let lastIndex = comments.length-1; 
 
     return(
