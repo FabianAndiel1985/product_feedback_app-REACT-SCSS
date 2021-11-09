@@ -24,13 +24,13 @@ function App() {
             <Route path="/" exact>
               <Suggestions/>
             </Route>
-            <Route path="/feedback/:id" exact >
+            <Route path="/feedback/:id">
               <FeedbackDetail/>
             </Route>
-            <Route path="/new-feedback/" exact >
+            <Route path="/new-feedback/">
               <NewFeedback/>
             </Route>
-            <Route path="/roadmap/" exact >
+            <Route path="/roadmap/">
               <Roadmap/>
             </Route>
           </Provider>
