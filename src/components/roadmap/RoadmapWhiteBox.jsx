@@ -1,7 +1,9 @@
-import  {LongWhiteBox,colorStripe_live,colorStripe_planned,colorStripe_inProgress} from "./RoadmapWhiteBox.module.scss";
-import Pill from '../suggestions/components/sidebar/components/pill';
+import  {LongWhiteBox,colorStripe_live,colorStripe_planned,colorStripe_inProgress,status_display,innerBox} from "./RoadmapWhiteBox.module.scss";
 import { useHistory } from "react-router-dom";
 import Counter from "../suggestions/components/main/components/Counter";
+import Pill from '../suggestions/components/sidebar/components/pill';
+
+
 
 const RoadmapWhiteBox = ({title,description,category,upvotes,comments,linkFurther,id}) => {
 
@@ -13,60 +15,45 @@ const RoadmapWhiteBox = ({title,description,category,upvotes,comments,linkFurthe
         history.push(`/feedback/${id}`);
     }
 
-    let color = "#62BCFA"
-
-    const status="in-progress"
-
+    const status="live";
+    const titlePH = "Testtitel";
+    const descriptionPH = " Im doin the descripti ";
+    const amountPH = 7;
+    const categoryPH= "Feature";
 
     return (
         <>
-        <div className={LongWhiteBox}
+       
+        <div
+            className={LongWhiteBox}
         >
             <div
-                className={(status === "in-progress" ? colorStripe_inProgress: (status==="live" ? colorStripe_live :colorStripe_planned))}
+                className={(status === "in-progress" ? colorStripe_inProgress : (status==="live" ? colorStripe_live :colorStripe_planned))}>
+            </div>
+
+            <div
+            className={innerBox}
             >
-            </div>
-            {/* <ul>
-                <li
-                >
-                    Status {status}
-                </li>
-            </ul>
+                <ul classname={(status_display)}>
+                    <li>
+                        {status}
+                    </li>
+                </ul>
 
+                <h3>{titlePH}</h3>
+                <p> {descriptionPH}</p>
+                <Pill 
+                text={categoryPH}
+                orientation={"horizontal"}
+                />
 
-
-
-            <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem}>
-                <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter}>
-                        
-                        <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter_pillTabletDesktop}>
-                            <Pill  text={""} orientation={"vertical"}>
-                                <Counter orientation={"vertical"} number={upvotes}/>
-                            </Pill>
-                        </div>
-
-                        <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__counter_pillMobile}>
-                            <Pill  text={""} orientation={"horizontal"}>
-                                <Counter orientation={"horizontal"} number={upvotes}/>
-                            </Pill>
-                        </div>
+                <div>
+                <Pill/> 
+                {SpeechBubble}
+                {amountPH}
                 </div>
-                <div className={LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text}>
-                    <h3 style={{margin:"0px"}}>{title}</h3>
-                    <p style={{margin:"0.1em"}}>{description}</p>
+            </div> 
 
-                    <Pill text={category} orientation={"horizontal"}/>
-                </div>   
-            </div>
-
-            <div className={LongWhiteBoxStyles.LongWhiteBox__secondFlexItem}>
-                <div className={LongWhiteBoxStyles.LongWhiteBox__secondFlexItem__container}>
-                    {SpeechBubble}
-                    <div>
-                        {comments ? comments.length : 0 }
-                    </div>
-                </div>
-            </div> */}
         </div>
         </>
     )

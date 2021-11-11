@@ -1,13 +1,12 @@
-import { useState } from "react";
 import Pill from "./components/pill";
 import * as sidebarStyles from "./sidebar.module.scss";
-import { useDispatch} from 'react-redux'
 import {handleFilterCriteriaChange} from '../main/sortingService';
+import { useHistory } from "react-router-dom";
 
 
 const Sidebar = ({data}) => {
     
-    const dispatch = useDispatch();
+    const history = useHistory();
 
     const countOccurrences = (data,criteria1,criteria2,criteria3)=>{
             return {
@@ -17,6 +16,11 @@ const Sidebar = ({data}) => {
             }
     }
     
+    const linkFurtherHandler = ()=>{
+        history.push('/roadmap');
+    }
+
+
     let occurences = countOccurrences(data,"planned","in-progress","live");
 
     return (
@@ -72,7 +76,9 @@ const Sidebar = ({data}) => {
             
             <div> 
                     <span>Roadmap</span> 
-                    <a href="">View</a>
+                    <a 
+                    onClick={linkFurtherHandler}
+                    >View</a>
             </div>
 
             <ul>
