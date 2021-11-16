@@ -5,9 +5,68 @@ $brightVioletColor:#ad1fea;
 $darkBlueColor:#3a4374;
 $hooverDarkBlue:#656EA3;
 
-// =================dimensions===================
+// =================screen-dimensions===================
 
 $mq-phone-max: 619px;
 $mq-tablet-min: $mq-phone-max+1px;
 $mq-computer-min:768px;
 
+
+
+// =================heading font-sizes==================
+
+@mixin heading1{
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+@mixin heading2{
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: bold;
+}
+
+@mixin heading3{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+@mixin heading4{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+
+
+// =================body font-sizes==================
+
+@mixin body1{
+    font-size: 16px;
+    line-height: 23px;
+}
+
+@mixin body2{
+    font-size: 15px;
+    line-height: 22px;
+}
+
+@mixin body3{
+    font-size: 13px;
+    line-height: 19px;
+}
+
+
+// =================mixins===================
+
+@mixin individualBulletPoint($color) {
+    &:before {
+        content: "\2022";
+        color: $color;
+        font-weight: bold;
+        width: 1em;
+        margin-left: -1em;
+    }
+}

@@ -8,7 +8,6 @@
     min-width: 180px;
     width: 30%;
     margin: 1em 0em;
-
 }
 
 @mixin sidebarBoxPC {
@@ -33,14 +32,6 @@
     font-size: 1em;
 }
 
-@mixin individualBulletPoint($color) {
-        content: "\2022";
-        color: $color;
-        font-weight: bold;
-        width: 1em;
-        margin-left: -1em;
-}
- 
 .sidebarGradient {
     background: url("../../../../assets/background-header.png") no-repeat center center;
     background-size: cover;
@@ -117,13 +108,12 @@
         ul {
             padding-left: 1.5em;
             li{
+             
 
                 &:nth-child(1){
                     @include row;
                     
-                    &::before {
-                        @include individualBulletPoint(#F49F85);
-                    }
+                    @include individualBulletPoint(#F49F85);
                         
                    span{
                         &:nth-child(2){
@@ -136,9 +126,7 @@
                 &:nth-child(2){
                     @include row;
 
-                    &::before {
-                        @include individualBulletPoint(#AD1FEA);
-                    }
+                    @include individualBulletPoint(#AD1FEA);
                  
                     span {
                         &:nth-child(2){
@@ -150,9 +138,8 @@
                 &:nth-child(3){
                     @include row;
 
-                    &::before {
-                        @include individualBulletPoint(#4661E6);
-                    }
+                    @include individualBulletPoint(#4661E6);
+                   
 
                     span {
                         &:nth-child(2){

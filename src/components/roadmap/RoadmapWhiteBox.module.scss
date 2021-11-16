@@ -1,3 +1,5 @@
+@import "../../constants/variables";
+
 $stripe_height:5px;
 
 .LongWhiteBox{
@@ -25,19 +27,64 @@ $stripe_height:5px;
     }
 
     .innerBox{
-        border:2px solid black;
         padding: 0em 0.6em 0.7em 2em;
-    
-        ul{
+         ul{
             padding-left: 0px;    
             list-style-position: inside;
+            
+            .bulletPoint_planned{
+                &::marker {
+                  color: red;
+                  font-size: 1.5em;
+                }     
+          } 
+        
+            .bulletPoint_inProgress{
+                  &::marker {
+                    color: #AD1FEA;
+                    font-size: 1.5em;
+                  }     
+            }
+            
+          .bulletPoint_live{
+                &::marker {
+                  color:#62BCFA;
+                  font-size: 1.5em;
+                }     
+          }
+
+            li{
+                span{
+                @include body1();
+                }    
+            }
         }
 
-        
+        h3{
+            @include heading2();
+            margin-bottom: 10px;
+        }
 
+        p{
+            margin: 0 0 8px 0;
+        }
+
+        .bottomRow{
+            display: flex;
+            justify-content: space-between;  
+            margin: 8px 0px 0px 0px;
+
+            div{
+                display: flex;
+                align-items: center;
+                svg{
+                    margin-right: 6px;
+                }
+
+            }
+        }
     }
-    
-
 }
+
 
 

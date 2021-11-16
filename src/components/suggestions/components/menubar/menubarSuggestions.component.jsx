@@ -27,19 +27,22 @@ function MenubarSuggestions({data}) {
 
        return (
            <Menubar>
-               <div className={menubarStyles.symbol}>
-                    {SuggestionIcon}
-              </div>
+               <span
+               className={menubarStyles.firstItem}
+               >
+                <div className={menubarStyles.symbol}>
+                        {SuggestionIcon}
+                </div>
 
-                 <div className={menubarStyles.amountOfSuggestions}>
-                     <div>
-                     {amountOfSuggestions}
-                     </div>
-                     <div  className={menubarStyles.amountOfSuggestions_text}>
-                         Suggestions
-                     </div>
-                 </div>
-                
+                    <div className={menubarStyles.amountOfSuggestions}>
+                        <div>
+                        {amountOfSuggestions}
+                        </div>
+                        <div  className={menubarStyles.amountOfSuggestions_text}>
+                            Suggestions
+                        </div>
+                    </div>
+                 </span>
                  <div className={menubarStyles.sortingCategory}
                       onClick={toggleDropdown}   
                  >

@@ -1,4 +1,13 @@
-import  {LongWhiteBox,colorStripe_live,colorStripe_planned,colorStripe_inProgress,status_display,innerBox} from "./RoadmapWhiteBox.module.scss";
+import  {LongWhiteBox,
+         colorStripe_live,
+         colorStripe_planned,
+         colorStripe_inProgress,
+         innerBox,statusDisplay,
+         bulletPoint_inProgress,
+         bulletPoint_live,
+         bulletPoint_planned,
+         bottomRow
+        } from "./RoadmapWhiteBox.module.scss";
 import { useHistory } from "react-router-dom";
 import Counter from "../suggestions/components/main/components/Counter";
 import Pill from '../suggestions/components/sidebar/components/pill';
@@ -34,9 +43,15 @@ const RoadmapWhiteBox = ({title,description,category,upvotes,comments,linkFurthe
             <div
             className={innerBox}
             >
-                <ul classname={(status_display)}>
-                    <li>
-                        {status}
+                <ul classname={statusDisplay}>
+                    <li
+                    className={(status === "in-progress" ? bulletPoint_inProgress: (status==="live" ? bulletPoint_live :bulletPoint_planned))}
+                    >
+                        <span
+                        className={"statusText"}
+                        >
+                            {status}
+                        </span>
                     </li>
                 </ul>
 
@@ -47,10 +62,16 @@ const RoadmapWhiteBox = ({title,description,category,upvotes,comments,linkFurthe
                 orientation={"horizontal"}
                 />
 
-                <div>
-                <Pill/> 
-                {SpeechBubble}
-                {amountPH}
+                <div className={bottomRow}>
+                    <Pill
+                    orientation={"horizontal"}
+                    > 
+                        <Counter orientation={"horizontal"} number={7}/>
+                    </Pill>
+                    <div>
+                        {SpeechBubble}
+                        {amountPH}
+                    </div>
                 </div>
             </div> 
 
