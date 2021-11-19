@@ -34,6 +34,7 @@ const Roadmap = ()=>{
                         status={item.status}
                         upvotes={item.upvotes}
                         category={item.category}
+                        comments={item.comments ? item.comments.length : 0 }
                     />
                 </div>
             )

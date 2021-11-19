@@ -5,7 +5,7 @@ import  {
     colorStripe_inProgress
    } from "./colorStripe.module.scss";
 
-const colorStripe = ({status}) => {
+const ColorStripe = ({status}) => {
     return (
             <div
                 className={(status === "inProgress" ? colorStripe_inProgress : (status==="live" ? colorStripe_live :colorStripe_planned))}
@@ -14,4 +14,4 @@ const colorStripe = ({status}) => {
     )
 }
 
-export default colorStripe
+export default ColorStripe

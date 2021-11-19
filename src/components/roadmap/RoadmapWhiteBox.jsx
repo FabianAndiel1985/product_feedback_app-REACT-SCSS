@@ -11,11 +11,13 @@ import  {LongWhiteBox,
 import { useHistory } from "react-router-dom";
 import Counter from "../suggestions/components/main/components/Counter";
 import Pill from '../suggestions/components/sidebar/components/pill';
+import ColorStripe from "../shared/colorStripe";
 
 
 
-const RoadmapWhiteBox = ({title,description,category,status,comments,linkFurther,id}) => {
+const RoadmapWhiteBox = ({title,description,category,status,upvotes,comments,id}) => {
 
+    console.log("the comments " + comments)
     const SpeechBubble = <svg width="18" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M2.62 16H1.346l.902-.91c.486-.491.79-1.13.872-1.823C1.036 11.887 0 9.89 0 7.794 0 3.928 3.52 0 9.03 0 14.87 0 18 3.615 18 7.455c0 3.866-3.164 7.478-8.97 7.478-1.017 0-2.078-.137-3.025-.388A4.705 4.705 0 012.62 16z" fill="#CDD2EE" fill-rule="nonzero"/></svg>;
 
     let history = useHistory();
@@ -23,11 +25,7 @@ const RoadmapWhiteBox = ({title,description,category,status,comments,linkFurther
     const linkFurtherHandler = ()=>{
         history.push(`/feedback/${id}`);
     }
-    
-    const titlePH = "Testtitel";
-    const descriptionPH = " Im doin the descripti ";
-    const amountPH = 7;
-    const categoryPH= "Feature";
+
 
     return (
         <>
@@ -35,9 +33,9 @@ const RoadmapWhiteBox = ({title,description,category,status,comments,linkFurther
         <div
             className={LongWhiteBox}
         >
-            <div
-                className={(status === "in-progress" ? colorStripe_inProgress : (status==="live" ? colorStripe_live :colorStripe_planned))}>
-            </div>
+            <ColorStripe
+                status={status}
+            />
 
             <div
             className={innerBox}
@@ -66,11 +64,11 @@ const RoadmapWhiteBox = ({title,description,category,status,comments,linkFurther
                     text={category}
                     orientation={"horizontal"}
                     > 
-                        <Counter orientation={"horizontal"} number={7}/>
+                        <Counter orientation={"horizontal"} number={upvotes}/>
                     </Pill>
                     <div>
                         {SpeechBubble}
-                        {amountPH}
+                        {comments}
                     </div>
                 </div>
             </div> 
