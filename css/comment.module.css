@@ -1,0 +1,58 @@
+.comment .firstRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comment .firstRow .firstRow_firstFlexItem {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.comment .firstRow .firstRow_firstFlexItem img {
+  border-radius: 50px;
+}
+
+.comment .firstRow .firstRow_firstFlexItem .firstRow_firstFlexItem_text {
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 1.3em;
+}
+
+.comment .firstRow .firstRow_firstFlexItem .firstRow_firstFlexItem_text span:first-child {
+  font-weight: bold;
+}
+
+.comment .firstRow .firstRow_firstFlexItem .firstRow_firstFlexItem_text span:nth-child(2) {
+  color: red;
+}
+
+.comment .firstRow .firstRow_secondFlexItem {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment .firstRow .firstRow_secondFlexItem span {
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comment p span {
+  color: #AD1FEA;
+  font-weight: bold;
+}

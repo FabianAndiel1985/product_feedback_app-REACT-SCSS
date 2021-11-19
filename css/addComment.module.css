@@ -1,0 +1,44 @@
+.addComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 463px) {
+  .addComment {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.addComment textarea {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 463px) {
+  .addComment textarea {
+    margin-right: 1rem;
+  }
+}
+
+.addComment button {
+  display: inline-block;
+  margin: 1em auto 0 auto;
+}
+
+@media only screen and (min-width: 463px) {
+  .addComment button {
+    margin-top: 0;
+  }
+}

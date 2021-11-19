@@ -1,0 +1,11 @@
+.buttonStyle {
+  color: white;
+  background: #ad1fea;
+  cursor: pointer;
+  padding: 0.7em 2em;
+  border-radius: var(--box-radius);
+}
+
+.buttonStyle:hover {
+  background: #c75af6;
+}

@@ -1,0 +1,91 @@
+.LongWhiteBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1.4em 0.8em;
+  background-color: var(--box-background);
+  border-radius: var(--box-radius);
+  overflow: hidden;
+}
+
+.LongWhiteBox .colorStripe_live {
+  height: 5px;
+  background-color: #62BCFA;
+}
+
+.LongWhiteBox .colorStripe_planned {
+  height: 5px;
+  background-color: #F49F85;
+}
+
+.LongWhiteBox .colorStripe_inProgress {
+  height: 5px;
+  background-color: #AD1FEA;
+}
+
+.LongWhiteBox .innerBox {
+  padding: 0em 0.6em 0.7em 2em;
+}
+
+.LongWhiteBox .innerBox ul {
+  padding-left: 0px;
+  list-style-position: inside;
+}
+
+.LongWhiteBox .innerBox ul .bulletPoint_planned::marker {
+  color: #F49F85;
+  font-size: 1.5em;
+}
+
+.LongWhiteBox .innerBox ul .bulletPoint_inProgress::marker {
+  color: #AD1FEA;
+  font-size: 1.5em;
+}
+
+.LongWhiteBox .innerBox ul .bulletPoint_live::marker {
+  color: #62BCFA;
+  font-size: 1.5em;
+}
+
+.LongWhiteBox .innerBox ul li span {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.LongWhiteBox .innerBox h3 {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.LongWhiteBox .innerBox p {
+  margin: 0 0 8px 0;
+}
+
+.LongWhiteBox .innerBox .bottomRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8px 0px 0px 0px;
+}
+
+.LongWhiteBox .innerBox .bottomRow div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.LongWhiteBox .innerBox .bottomRow div svg {
+  margin-right: 6px;
+}

@@ -1,0 +1,42 @@
+.componentBasicStyles {
+  position: relative;
+  background-color: white;
+  border-radius: var(--box-radius);
+  padding: 1em 1em;
+  margin-top: 1.5em;
+}
+
+.componentBasicStyles h3 {
+  margin-top: 0em;
+}
+
+.componentBasicStyles .commentArea {
+  display: block !important;
+  width: 100%;
+  min-height: 90px;
+  margin-bottom: 1.2em;
+  margin-top: 0.8em;
+  border: none;
+  background-color: #F2F4FF;
+  resize: none;
+}
+
+.componentBasicStyles .commentArea:hover {
+  border: 1.5px solid #3a4374;
+}
+
+.componentBasicStyles .componentBasicStyles_bottomRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.componentBasicStyles .componentBasicStyles_bottomRow .componentBasicStyles_bottomRow_firstItem {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

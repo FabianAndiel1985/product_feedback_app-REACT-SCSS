@@ -1,0 +1,100 @@
+.LongWhiteBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.6em 0.6em 0.7em 0.6em;
+  margin: 1.4em 0.8em;
+  background-color: var(--box-background);
+  border-radius: var(--box-radius);
+}
+
+.LongWhiteBox .LongWhiteBox__firstFlexItem {
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBox__firstFlexItem__counter {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media only screen and (max-width: 461px) {
+  .LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBox__firstFlexItem__counter .LongWhiteBox__firstFlexItem__counter_pillTabletDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 462px) {
+  .LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBox__firstFlexItem__counter .LongWhiteBox__firstFlexItem__counter_pillTabletDesktop {
+    display: initial;
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
+@media only screen and (min-width: 462px) {
+  .LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBox__firstFlexItem__counter .LongWhiteBox__firstFlexItem__counter_pillMobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 462px) {
+  .LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBox__firstFlexItem__counter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-right: 0.8em;
+  }
+}
+
+.LongWhiteBox .LongWhiteBox__firstFlexItem .LongWhiteBoxStyles.LongWhiteBox__firstFlexItem__text p {
+  margin: 0.1em 0em !important;
+}
+
+@media only screen and (min-width: 462px) {
+  .LongWhiteBox .LongWhiteBox__firstFlexItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.LongWhiteBox .LongWhiteBox__secondFlexItem {
+  display: inherit;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.LongWhiteBox .LongWhiteBox__secondFlexItem .LongWhiteBox__secondFlexItem__container {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.LongWhiteBox .LongWhiteBox__secondFlexItem .LongWhiteBox__secondFlexItem__container div {
+  margin-left: 0.5em;
+}

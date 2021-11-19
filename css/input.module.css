@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  position: relative;
+  margin-top: 1.3em;
+}
+
+.container .customInput {
+  margin-top: 0.8em;
+  border: none;
+  background-color: #F2F4FF;
+  resize: none;
+  width: 100%;
+}
+
+.container .customInput:hover {
+  border: 1.5px solid #3a4374;
+}
+
+.container .warningMessage {
+  color: red;
+}
+
+select {
+  height: 30.04px;
+  padding: 2px;
+}

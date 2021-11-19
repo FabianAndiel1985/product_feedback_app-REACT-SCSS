@@ -1,0 +1,10 @@
+.commentsBackground {
+  background-color: white;
+  padding: 1.8em 1.5em;
+  border-radius: var(--box-radius);
+}
+
+.commentsBackground .commentsBackground_amountComments {
+  font-weight: bold;
+  margin-bottom: 1em;
+}

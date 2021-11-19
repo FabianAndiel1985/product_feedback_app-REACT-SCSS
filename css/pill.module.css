@@ -1,0 +1,22 @@
+.pillHorizontal {
+  background: #f2f4ff;
+  border: none;
+  color: #4661e6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+}
+
+.pillVertical {
+  background: #f2f4ff;
+  border: none;
+  color: #4661e6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 16px;
+  width: 2em;
+}

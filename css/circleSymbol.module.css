@@ -1,0 +1,22 @@
+.symbolContainer {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(45deg, #e84d70 20%, #a337f6 80%, #28b2ed 100%);
+  top: -50px;
+}
+
+.symbolContainer svg {
+  fill: white;
+  width: 25px;
+}

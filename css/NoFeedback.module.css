@@ -1,0 +1,19 @@
+.component_styles {
+  text-align: center;
+  margin: auto 0em !important;
+  background-color: white;
+  border-radius: var(--box-radius);
+  padding: 8em 0em;
+}
+
+.component_styles button {
+  color: white;
+  background: #ad1fea;
+  cursor: pointer;
+  padding: 0.7em 2em;
+  border-radius: inherit;
+}
+
+.component_styles button:hover {
+  background: #c75af6;
+}

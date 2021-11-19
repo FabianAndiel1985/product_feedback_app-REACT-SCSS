@@ -1,0 +1,29 @@
+.firstSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em 1.3em 0.5em 1.5em;
+  color: white;
+  background-color: #3a4374;
+  border-radius: none;
+}
+
+.firstSection div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 613px) {
+  .firstSection {
+    margin: 1em 1.2em;
+    border-radius: var(--box-radius);
+  }
+}

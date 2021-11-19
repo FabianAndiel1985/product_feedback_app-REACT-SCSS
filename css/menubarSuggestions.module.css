@@ -1,0 +1,34 @@
+.firstItem .symbol {
+  display: none;
+}
+
+.firstItem .amountOfSuggestions {
+  display: none;
+  margin: 0em 4em 0em 0.8em;
+  font-weight: bold;
+}
+
+.firstItem .amountOfSuggestions .amountOfSuggestions_text {
+  margin: 0em 0em 0em 0.5em;
+}
+
+@media only screen and (max-width: 619px) {
+  .firstItem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.sortingCategory {
+  margin: 0em 1.4em 0em 0em;
+  cursor: pointer;
+}
+
+.sortingCategory .sortBy {
+  margin-right: 0.65em;
+}
