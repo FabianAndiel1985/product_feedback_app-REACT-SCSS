@@ -1,20 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 import Menubar from "../../components/shared/menubar.component";
 import RouteBack from "../../components/shared/routeBack.component";
 import * as roadmapStyles from "./roadmap.module.scss" 
 import RoadmapWhiteBox from "../../components/roadmap/RoadmapWhiteBox";
-import { useSelector } from 'react-redux';
 import Data from "../../assets/data.json";
+import { splitIntoCategories,countOcc } from "../../components/suggestions/components/sidebar/sidebar.services";
+import CategorySwitch from "../../components/roadmap/categorySwitch.component";
 
-const countOccurrences = (data,criteria1,criteria2,criteria3)=>{
-    return {
-        planned: data.filter((item)=>item.status === `${criteria1}`).length,
-        inProgress: data.filter((item)=>item.status === `${criteria2}`).length,
-        live:data.filter((item)=>item.status === `${criteria3}`).length
+
+
+const Roadmap = ()=>{
+
+    const [activeCategory, setActiveCategory] = useState("live");
+
+    const {productRequests} = Data;
+
+    const handleCategorySwitch = (param)=>{
+        setActiveCategory(param);
     }
-}
 
-const roadmap = ()=>{
+    let splitedObj = splitIntoCategories(productRequests,["planned","in-progress","live"]);
+
+    let occurences = countOcc(splitedObj)
+    console.log(splitedObj)
+
+    const presentedSuggestions = splitedObj[activeCategory].map(
+        (item)=>(
+                <div>
+                    <RoadmapWhiteBox
+                        title={item.title}
+                        description={item.description}
+                        upvotes={item.upvotes}
+                        status={item.status}
+                    />
+                </div>
+            )
+    )
+
+   
+
 return(
     <>
         <div 
@@ -34,23 +58,14 @@ return(
                     </div>
                 </Menubar>
             </header>
+            <CategorySwitch
+                categories={occurences}
+                click={handleCategorySwitch}
+                />
             <main 
                 className= {roadmapStyles.gridContainer}
             >
-
-                {/* Mapping of long white box comes here */}
-                <div>
-                    <RoadmapWhiteBox/>
-                </div>
-                <div>
-                    b
-                </div>
-                <div>
-                    c
-                </div>
-                
-
-
+                {presentedSuggestions} 
             </main>
         </div>
     </>
@@ -58,4 +73,4 @@ return(
 }
 
 
-export default roadmap;
+export default Roadmap;

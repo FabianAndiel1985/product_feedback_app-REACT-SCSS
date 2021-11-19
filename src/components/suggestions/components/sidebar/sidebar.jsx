@@ -2,26 +2,39 @@ import Pill from "./components/pill";
 import * as sidebarStyles from "./sidebar.module.scss";
 import {handleFilterCriteriaChange} from '../main/sortingService';
 import { useHistory } from "react-router-dom";
+import { splitIntoCategories,countOcc } from "./sidebar.services";
+import { categories } from "../../../../constants/categories.constants";
 
 
 const Sidebar = ({data}) => {
     
     const history = useHistory();
 
-    const countOccurrences = (data,criteria1,criteria2,criteria3)=>{
-            return {
-                planned: data.filter((item)=>item.status === `${criteria1}`).length,
-                inProgress: data.filter((item)=>item.status === `${criteria2}`).length,
-                live:data.filter((item)=>item.status === `${criteria3}`).length
-            }
-    }
-    
+    let splitedObj = splitIntoCategories(data,["planned","in-progress","live"]);
+
     const linkFurtherHandler = ()=>{
         history.push('/roadmap');
     }
 
+    let occurences = countOcc(splitedObj);
 
-    let occurences = countOccurrences(data,"planned","in-progress","live");
+    const listBody = Object.entries(occurences).map(([key,value], i) => {
+        return (
+          <li key={i}>
+            {key} {value}
+          </li>
+        );
+      });
+
+      const pills = categories.map((item) => {
+        return (
+            <Pill 
+                text={item} 
+                orientation={"horizontal"}
+                setFilterCriteria={handleFilterCriteriaChange}
+              /> 
+        );
+      });
 
     return (
         <>
@@ -34,46 +47,12 @@ const Sidebar = ({data}) => {
         </div>
 
       <div className={sidebarStyles.sidebarWhiteFirst}>
-       
-              <Pill 
-              text={"All"} 
-              orientation={"horizontal"} 
-              setFilterCriteria={handleFilterCriteriaChange}
-              />
-              <Pill 
-                text={"UI"} 
-                orientation={"horizontal"}
-                setFilterCriteria={handleFilterCriteriaChange}
-              />  
-              <Pill 
-                text={"UX"} 
-                orientation={"horizontal"}
-                setFilterCriteria={handleFilterCriteriaChange}
-              />  
-      
-
-            <Pill 
-            text={"Enhancement"} 
-            orientation={"horizontal"}
-            setFilterCriteria={handleFilterCriteriaChange}
-            />
-            <Pill 
-            text={"Bug"} 
-            orientation={"horizontal"} 
-            setFilterCriteria={handleFilterCriteriaChange}
-            />  
-            <Pill 
-            text={"Feature"} 
-            orientation={"horizontal"}
-            setFilterCriteria={handleFilterCriteriaChange}
-            />  
+          {pills}
       </div>
       
       
       {occurences &&
-      
       <div className={sidebarStyles.sidebarWhiteSecond}> 
-            
             <div> 
                     <span>Roadmap</span> 
                     <a 
@@ -82,18 +61,7 @@ const Sidebar = ({data}) => {
             </div>
 
             <ul>
-                <li className="sidebarStyles.sidebarWhite__liFirst">
-                    <span>Planned</span> 
-                    <span> {occurences.planned} </span>
-                </li>
-                <li className="sidebarStyles.sidebarWhite__liSecond">
-                    <span>In-Progress</span> 
-                    <span> {occurences.inProgress} </span>
-                </li>
-                <li className="sidebarStyles.sidebarWhite__liThird">
-                    <span>Live</span> 
-                    <span>{occurences.live}</span>
-                </li>
+                {listBody}
             </ul>         
         </div> 
 

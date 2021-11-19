@@ -1,0 +1,34 @@
+.switchContainer{
+    display:grid;
+    margin:0 0;
+    grid-template-columns: repeat(3,0.75fr);
+    grid-template-rows: repeat(auto,5px);
+    border:0.5px solid gray;   
+    padding: 10px !important;
+    cursor: pointer;
+
+    .categoryBox{
+        padding:4px;
+        text-align: center;
+        color:#647196;
+        h3{
+            font-size: 18px;
+        }
+        div{
+            visibility: hidden;
+        }
+
+        &:hover{
+            color:#3A4374;
+
+            div{
+                visibility: visible;
+            }
+            
+        }
+    }
+
+    
+
+
+}
