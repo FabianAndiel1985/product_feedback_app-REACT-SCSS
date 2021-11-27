@@ -6,7 +6,7 @@ import RoadmapWhiteBox from "../../components/roadmap/RoadmapWhiteBox";
 import Data from "../../assets/data.json";
 import { splitIntoCategories,countOcc } from "../../components/suggestions/components/sidebar/sidebar.services";
 import CategorySwitch from "../../components/roadmap/categorySwitch.component";
-import {createRoadmapColumn} from "../../components/roadmap/roadmap.service.jsx";
+import {transformIntoNodeObject} from "../../components/roadmap/roadmap.service.jsx";
 import useWindowDimensions from "../../helpers/getWindowDimensions.hook";
 
 
@@ -23,19 +23,32 @@ const Roadmap = ()=>{
     }
 
     let splitedObj = splitIntoCategories(productRequests,["planned","in-progress","live"]);
- 
+    console.log(splitedObj);
+    
     let occurences = countOcc(splitedObj);
-
-    const presentedSuggestions = createRoadmapColumn(splitedObj,activeCategory);
-    let presentedSuggestions1 = createRoadmapColumn(splitedObj,"planned");
-    let presentedSuggestions2 = createRoadmapColumn(splitedObj,"inProgress");
-    let presentedSuggestions3 = createRoadmapColumn(splitedObj,"live");
     
+   
+  
+    const presentedSuggestions = splitedObj[activeCategory].map(
+        (item)=>(
+                <div>
+                    <RoadmapWhiteBox
+                        title={item.title}
+                        description={item.description}
+                        upvotes={item.upvotes}
+                        status={item.status}
+                        upvotes={item.upvotes}
+                        category={item.category}
+                        comments={item.comments ? item.comments.length : 0 }
+                    />
+                </div>
+            )
+    )
+
+
     
 
-    const roadmapColumnDirection1 = (<div> {presentedSuggestions1} </div>)
-    const roadmapColumnDirection2 = (<div> {presentedSuggestions2} </div>)
-    const roadmapColumnDirection3 = (<div> {presentedSuggestions3} </div>)
+   
 
 return(
     <>
@@ -67,23 +80,15 @@ return(
             >
 
 
-                {width < 700 ? presentedSuggestions : null
+                {width < 700 ? presentedSuggestions : 
+                "nef"
                 } 
-
-                
-                {width >= 700 ?   <> 
-                                    {roadmapColumnDirection1}
-                                    {roadmapColumnDirection2} 
-                                     {roadmapColumnDirection3}
-                                </> : null
-                } 
- 
 
                 
 
                
 
-             
+                   });
 
 
 

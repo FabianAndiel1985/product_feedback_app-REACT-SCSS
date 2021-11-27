@@ -8,7 +8,7 @@ import  {
 const ColorStripe = ({status}) => {
     return (
             <div
-                className={(status === "inProgress" ? colorStripe_inProgress : (status==="live" ? colorStripe_live :colorStripe_planned))}
+                className={(status === "inProgress" || status === "in-progress" ? colorStripe_inProgress : (status==="live" ? colorStripe_live :colorStripe_planned))}
             >
             </div>
     )

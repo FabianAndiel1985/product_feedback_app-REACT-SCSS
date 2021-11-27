@@ -18,6 +18,8 @@ const Sidebar = ({data}) => {
 
     let occurences = countOcc(splitedObj);
 
+    const HamburgerIcon = <svg width="20" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z"/></g></svg>;
+
     const listBody = Object.entries(occurences).map(([key,value], i) => {
         return (
           <li key={i}>
@@ -32,7 +34,7 @@ const Sidebar = ({data}) => {
                 text={item} 
                 orientation={"horizontal"}
                 setFilterCriteria={handleFilterCriteriaChange}
-              /> 
+              />
         );
       });
 
@@ -44,6 +46,7 @@ const Sidebar = ({data}) => {
                 Fabian`s <br/>
                 Feedback Board 
             </p>
+            {HamburgerIcon}
         </div>
 
       <div className={sidebarStyles.sidebarWhiteFirst}>

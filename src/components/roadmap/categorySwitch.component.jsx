@@ -5,13 +5,16 @@ import ColorStripe from "../shared/colorStripe.jsx";
 const categorySwitch = ({categories, click})=>{
 
 
+
     const categorySwitchContent = Object.entries(categories).map(([key,value], i) => {
         return (
           <>
           <div 
           className={styles.categoryBox}
           onClick={()=>{
-            click(key)
+            if(click) {
+              click(key)
+            }
           }}
           >
               <h3>

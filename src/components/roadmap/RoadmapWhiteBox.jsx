@@ -1,7 +1,4 @@
 import  {LongWhiteBox,
-         colorStripe_live,
-         colorStripe_planned,
-         colorStripe_inProgress,
          innerBox,statusDisplay,
          bulletPoint_inProgress,
          bulletPoint_live,

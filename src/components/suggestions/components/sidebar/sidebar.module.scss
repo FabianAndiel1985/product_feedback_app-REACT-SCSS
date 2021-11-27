@@ -47,10 +47,22 @@
         }
     }
 
+    svg{
+        cursor:pointer;
+        @media only screen and (min-width: $mq-tablet-min) {
+           display: none;
+        }
+    }
+
+    
+
     @media only screen and (max-width: $mq-phone-max) {
         border-radius: initial;
         padding: 0.3em 1.5em 0.4em 1.5em;
         margin:0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     @media only screen and (min-width: $mq-tablet-min) {

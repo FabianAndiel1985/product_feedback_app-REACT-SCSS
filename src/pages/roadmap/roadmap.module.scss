@@ -1,3 +1,6 @@
+@import "../../constants/variables";
+
+
 .roadmapContainer{
 
 margin: 0em auto;
@@ -16,18 +19,22 @@ margin: 0em auto;
         margin:0 1.2em;
         grid-template-columns: repeat(auto,1fr);
         grid-template-rows: repeat(auto,20px);   
-
+    
 
         // Fall für 3 geteilte Spalte
         // größerer Viewport
         
-        // grid-template-columns: repeat(3,1fr);
-        // grid-template-rows: repeat(auto,20px);
+       
+        @media only screen and (min-width: $mq-tablet-min) {
+               grid-template-columns: repeat(3,1fr);
+               grid-template-rows: repeat(auto,20px);
+        }
     
         & > *{
-            padding: 2em;
+            padding: 0em;
         }
 
     }
 
+   
 }
