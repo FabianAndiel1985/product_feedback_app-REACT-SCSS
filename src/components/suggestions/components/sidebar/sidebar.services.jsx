@@ -37,7 +37,7 @@ export const countOcc = (data) =>{
 }
 
 export const createRoadmapColumns = (splitedObj) =>{
-    let suggestionsColumnsArray=[]
+    let suggestionsColumnsArray=[];
     for (let key in splitedObj) {
         let suggestions = createRoadmapColumn(splitedObj,key);
         const suggestionsColumn = (<div> {suggestions} </div>)

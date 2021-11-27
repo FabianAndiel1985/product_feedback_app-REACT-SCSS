@@ -11,7 +11,7 @@ import useWindowDimensions from "../../helpers/getWindowDimensions.hook";
 
 const Roadmap = ()=>{
 
-    const {width } = useWindowDimensions();
+    const {width} = useWindowDimensions();
 
     const [activeCategory, setActiveCategory] = useState("live");
 
@@ -28,12 +28,6 @@ const Roadmap = ()=>{
     const singleSuggestionsColumn = createRoadmapColumn(splitedObj,activeCategory);
     
     const suggestionsColumnsArray= createRoadmapColumns(splitedObj)
-    
-    for (let key in splitedObj) {
-        let suggestions = createRoadmapColumn(splitedObj,key);
-        const suggestionsColumn = (<div> {suggestions} </div>)
-        suggestionsColumnsArray.push(suggestionsColumn);  
-    }
     
 return(
     <>
