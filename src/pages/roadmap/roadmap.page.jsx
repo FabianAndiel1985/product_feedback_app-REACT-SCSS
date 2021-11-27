@@ -2,17 +2,16 @@ import React, {useState} from "react";
 import Menubar from "../../components/shared/menubar.component";
 import RouteBack from "../../components/shared/routeBack.component";
 import * as roadmapStyles from "./roadmap.module.scss" 
-import RoadmapWhiteBox from "../../components/roadmap/RoadmapWhiteBox";
 import Data from "../../assets/data.json";
 import { splitIntoCategories,countOcc } from "../../components/suggestions/components/sidebar/sidebar.services";
 import CategorySwitch from "../../components/roadmap/categorySwitch.component";
-import {createRoadmapColumn} from "../../components/roadmap/roadmap.service.jsx";
+import {createRoadmapColumn, createRoadmapColumns} from "../../components/roadmap/roadmap.service.jsx";
 import useWindowDimensions from "../../helpers/getWindowDimensions.hook";
 
 
 const Roadmap = ()=>{
 
-    const { height, width } = useWindowDimensions();
+    const {width } = useWindowDimensions();
 
     const [activeCategory, setActiveCategory] = useState("live");
 
@@ -24,19 +23,18 @@ const Roadmap = ()=>{
 
     let splitedObj = splitIntoCategories(productRequests,["planned","in-progress","live"]);
  
-    let occurences = countOcc(splitedObj);
+    const occurences = countOcc(splitedObj);
 
-    const presentedSuggestions = createRoadmapColumn(splitedObj,activeCategory);
-    let presentedSuggestions1 = createRoadmapColumn(splitedObj,"planned");
-    let presentedSuggestions2 = createRoadmapColumn(splitedObj,"inProgress");
-    let presentedSuggestions3 = createRoadmapColumn(splitedObj,"live");
+    const singleSuggestionsColumn = createRoadmapColumn(splitedObj,activeCategory);
     
+    const suggestionsColumnsArray= createRoadmapColumns(splitedObj)
     
-
-    const roadmapColumnDirection1 = (<div> {presentedSuggestions1} </div>)
-    const roadmapColumnDirection2 = (<div> {presentedSuggestions2} </div>)
-    const roadmapColumnDirection3 = (<div> {presentedSuggestions3} </div>)
-
+    for (let key in splitedObj) {
+        let suggestions = createRoadmapColumn(splitedObj,key);
+        const suggestionsColumn = (<div> {suggestions} </div>)
+        suggestionsColumnsArray.push(suggestionsColumn);  
+    }
+    
 return(
     <>
         <div 
@@ -67,14 +65,18 @@ return(
             >
 
 
-                {width < 700 ? presentedSuggestions : null
-                } 
+                {width < 700 ? singleSuggestionsColumn : null} 
 
                 
                 {width >= 700 ?   <> 
-                                    {roadmapColumnDirection1}
-                                    {roadmapColumnDirection2} 
-                                     {roadmapColumnDirection3}
+                                    {
+                                        suggestionsColumnsArray.map((item=>{
+                                            return(
+                                                item
+                                            )
+                                        }))
+
+                                    }
                                 </> : null
                 } 
  

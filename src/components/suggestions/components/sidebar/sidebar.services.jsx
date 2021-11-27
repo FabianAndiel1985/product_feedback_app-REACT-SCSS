@@ -1,12 +1,14 @@
+import {createRoadmapColumn} from "../../../roadmap/roadmap.service";
+
 export const substitueDash = (stringToModify) =>{
     let dashIndex=null;
     let textArray = Object.assign([], stringToModify);
     for (let i = 0; i < textArray.length; i++) {
         if(textArray[i] === "-"){
             dashIndex = i;
-           
         }
     }
+
     textArray.splice(dashIndex,1);
     textArray[dashIndex] = textArray[dashIndex].toUpperCase();
     return textArray.join("")
@@ -32,4 +34,14 @@ export const countOcc = (data) =>{
         occurencesCount[key] = value.length
       }
     return occurencesCount;
+}
+
+export const createRoadmapColumns = (splitedObj) =>{
+    let suggestionsColumnsArray=[]
+    for (let key in splitedObj) {
+        let suggestions = createRoadmapColumn(splitedObj,key);
+        const suggestionsColumn = (<div> {suggestions} </div>)
+        suggestionsColumnsArray.push(suggestionsColumn);  
+    }
+    return suggestionsColumnsArray;
 }
