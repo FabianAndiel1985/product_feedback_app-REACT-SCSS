@@ -5,7 +5,8 @@ import * as roadmapStyles from "./roadmap.module.scss"
 import Data from "../../assets/data.json";
 import { splitIntoCategories,countOcc } from "../../components/suggestions/components/sidebar/sidebar.services";
 import CategorySwitch from "../../components/roadmap/categorySwitch.component";
-import {createRoadmapColumn, createRoadmapColumns} from "../../components/roadmap/roadmap.service.jsx";
+import {createRoadmapColumn} from "../../components/roadmap/roadmap.service.jsx";
+import { createRoadmapColumns } from "../../components/suggestions/components/sidebar/sidebar.services";
 import useWindowDimensions from "../../helpers/getWindowDimensions.hook";
 
 
