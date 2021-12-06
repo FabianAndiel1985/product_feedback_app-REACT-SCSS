@@ -1,0 +1,12 @@
+@import "../../../../../constants/variables";
+
+
+.box{
+    position: absolute;
+    right:0;
+    height:400px;
+    margin-left: auto;
+    background-color: $defaultBodyColor;
+    z-index: 1;
+    width:75%;
+}

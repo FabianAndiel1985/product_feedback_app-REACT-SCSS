@@ -4,6 +4,7 @@
 $brightVioletColor:#ad1fea;
 $darkBlueColor:#3a4374;
 $hooverDarkBlue:#656EA3;
+$defaultBodyColor:#F2F4FF;
 
 // =================screen-dimensions===================
 
@@ -69,4 +70,36 @@ $mq-computer-min:768px;
         width: 1em;
         margin-left: -1em;
     }
+}
+
+@mixin basicWhiteBoxStyles {
+    background-color:var(--box-background); 
+    border-radius: var(--box-radius);
+    margin-top: 0.8em;
+    padding: 1.5em;
+    font-size: 1em;
+}
+
+@mixin hideSidebarBoxCellphone {
+    display:none;
+}
+
+@mixin sidebarBoxTablet {
+    min-width: 180px;
+    width: 30%;
+    margin: 1em 0em;
+}
+
+@mixin sidebarBoxPC {
+    margin: 0.8em 1.2em 0em auto;
+}
+
+
+@mixin row {
+    display: flex;
+}
+
+@mixin push2ndElementToSide {
+    display:inline-block;
+    margin-left: auto;
 }

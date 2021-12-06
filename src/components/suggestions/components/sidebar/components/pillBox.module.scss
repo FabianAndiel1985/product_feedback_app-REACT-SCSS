@@ -1,0 +1,14 @@
+@import "../../../../../constants/variables";
+
+.box {
+    @include basicWhiteBoxStyles;
+
+    @media only screen and (min-width: $mq-tablet-min) {
+        @include sidebarBoxTablet;
+    
+    }
+
+    @media only screen and (min-width: 768px) {
+        @include sidebarBoxPC();
+    }
+}

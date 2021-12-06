@@ -5,9 +5,15 @@ import {handleFilterCriteriaChange} from '../main/sortingService';
 import { useHistory } from "react-router-dom";
 import { splitIntoCategories,countOcc } from "./sidebar.services";
 import { categories } from "../../../../constants/categories.constants";
-
+import RoadmapBox from "./components/roadmapBox.component";
+import PillBox from "./components/pillBox.component";
+import MobileSidebar from "./components/mobileSidebar.component";
+import useWindowDimensions from "../../../../helpers/getWindowDimensions.hook";
+import { mqTabletMin } from "../../../../constants/sizes.constants";
 
 const Sidebar = ({data}) => {
+
+  const {width} = useWindowDimensions();
     
     const [isOpen, setIsOpen] = useState(false)
     
@@ -27,7 +33,6 @@ const Sidebar = ({data}) => {
     const toggelPanel = ()=>{
         setIsOpen((previousState)=>!previousState)
     }
-
 
     const listBody = Object.entries(occurences).map(([key,value], i) => {
         return (
@@ -70,28 +75,43 @@ const Sidebar = ({data}) => {
             }
         </div>
 
-      <div className={sidebarStyles.sidebarWhiteFirst}>
+      {isOpen
+      
+       &&  
+       <MobileSidebar>
+
+        <RoadmapBox
+          click={linkFurtherHandler}
+        >
+            {listBody}
+        </RoadmapBox>
+
+        <PillBox>
           {pills}
-      </div>
-      
-      
-      {occurences &&
-      <div className={sidebarStyles.sidebarWhiteSecond}> 
-            <div> 
-                    <span>Roadmap</span> 
-                    <a 
-                    onClick={linkFurtherHandler}
-                    >View</a>
-            </div>
+        </PillBox>
+        
+       </MobileSidebar>
+      }
 
-            <ul>
-                {listBody}
-            </ul>         
-        </div> 
+      
+            
+    {occurences && width >= mqTabletMin ?
+    <>
+      <PillBox>
+        {pills}
+      </PillBox>
 
-        }
+        <RoadmapBox
+          click={linkFurtherHandler}
+        >
+            {listBody}
+        </RoadmapBox>
+      </>
+        : null }
+
+
         </>
     )
-}
+  }
 
 export default Sidebar;

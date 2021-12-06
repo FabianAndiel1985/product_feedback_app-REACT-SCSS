@@ -1,0 +1,77 @@
+@import "../../../../../constants/variables";
+
+.box{
+    
+    @include basicWhiteBoxStyles;
+
+        div {
+            display:flex;
+            justify-content: space-between;
+            
+            span {
+             margin-left:1.5em;   
+             font-weight: bold;
+            }
+            a {
+                cursor:pointer;
+                color:blue;
+            }
+        }
+
+        ul {
+            padding-left: 1.5em;
+            li{
+             
+
+                &:nth-child(1){
+                    @include row;
+                    
+                    @include individualBulletPoint(#F49F85);
+                        
+                   span{
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                   }
+                }
+            
+
+                &:nth-child(2){
+                    @include row;
+
+                    @include individualBulletPoint(#AD1FEA);
+                 
+                    span {
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                    }
+                }
+
+                &:nth-child(3){
+                    @include row;
+
+                    @include individualBulletPoint(#4661E6);
+                   
+
+                    span {
+                        &:nth-child(2){
+                            @include push2ndElementToSide;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            margin: 0em auto;
+        }
+            
+        @media only screen and (min-width: $mq-tablet-min) {
+            @include sidebarBoxTablet;
+        }
+    
+        @media only screen and (min-width: 768px) {
+            @include sidebarBoxPC();
+        }
+}

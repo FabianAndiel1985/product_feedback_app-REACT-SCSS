@@ -5,12 +5,7 @@ const SidebarMobile = ()=> {
     return (
         <aside>
 
-
-
-
-            
-        </aside>
-        
+        </aside> 
     )
 }
 

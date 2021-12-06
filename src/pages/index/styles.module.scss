@@ -3,7 +3,7 @@
 .suggestionContainer{
 
    .sidebarContainer{
-      
+   
          @media only screen and (min-width: $mq-tablet-min) {
             display: flex;
             justify-content: space-between;
@@ -17,6 +17,8 @@
          margin-left: auto;
          width:250px;
      }
+
+     
    }
    
    .mainContainer{
