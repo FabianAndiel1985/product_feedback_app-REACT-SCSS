@@ -14,11 +14,30 @@
   }
 }
 
+.sidebarGradient svg {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 620px) {
+  .sidebarGradient svg {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 619px) {
   .sidebarGradient {
     border-radius: initial;
     padding: 0.3em 1.5em 0.4em 1.5em;
     margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -32,148 +51,6 @@
 
 @media only screen and (min-width: 768px) {
   .sidebarGradient {
-    margin: 0.8em 1.2em 0em auto;
-  }
-}
-
-.sidebarWhiteFirst {
-  background-color: var(--box-background);
-  border-radius: var(--box-radius);
-  margin-top: 0.8em;
-  padding: 1.5em;
-  font-size: 1em;
-}
-
-@media only screen and (max-width: 619px) {
-  .sidebarWhiteFirst {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 620px) {
-  .sidebarWhiteFirst {
-    min-width: 180px;
-    width: 30%;
-    margin: 1em 0em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .sidebarWhiteFirst {
-    margin: 0.8em 1.2em 0em auto;
-  }
-}
-
-.sidebarWhiteSecond {
-  background-color: var(--box-background);
-  border-radius: var(--box-radius);
-  margin-top: 0.8em;
-  padding: 1.5em;
-  font-size: 1em;
-}
-
-.sidebarWhiteSecond div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sidebarWhiteSecond div span {
-  margin-left: 1.5em;
-  font-weight: bold;
-}
-
-.sidebarWhiteSecond div a {
-  cursor: pointer;
-  color: blue;
-}
-
-.sidebarWhiteSecond ul {
-  padding-left: 1.5em;
-}
-
-.sidebarWhiteSecond ul li:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.sidebarWhiteSecond ul li:nth-child(1):before {
-  content: "\2022";
-  color: #F49F85;
-  font-weight: bold;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.sidebarWhiteSecond ul li:nth-child(1) span:nth-child(2) {
-  display: inline-block;
-  margin-left: auto;
-}
-
-.sidebarWhiteSecond ul li:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.sidebarWhiteSecond ul li:nth-child(2):before {
-  content: "\2022";
-  color: #AD1FEA;
-  font-weight: bold;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.sidebarWhiteSecond ul li:nth-child(2) span:nth-child(2) {
-  display: inline-block;
-  margin-left: auto;
-}
-
-.sidebarWhiteSecond ul li:nth-child(3) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.sidebarWhiteSecond ul li:nth-child(3):before {
-  content: "\2022";
-  color: #4661E6;
-  font-weight: bold;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.sidebarWhiteSecond ul li:nth-child(3) span:nth-child(2) {
-  display: inline-block;
-  margin-left: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .sidebarWhiteSecond {
-    margin: 0em auto;
-  }
-}
-
-@media only screen and (max-width: 619px) {
-  .sidebarWhiteSecond {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 620px) {
-  .sidebarWhiteSecond {
-    min-width: 180px;
-    width: 30%;
-    margin: 1em 0em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .sidebarWhiteSecond {
     margin: 0.8em 1.2em 0em auto;
   }
 }

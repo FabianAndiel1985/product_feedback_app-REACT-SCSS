@@ -5,6 +5,10 @@
         
         .symbol{
             display:none;
+            margin-right: 10px;
+            @media only screen and (min-width:$mq-tablet-min ) {
+                display:initial;
+            }
         }
         
         .amountOfSuggestions{

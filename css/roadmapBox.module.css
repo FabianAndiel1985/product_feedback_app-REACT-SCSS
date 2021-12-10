@@ -1,0 +1,107 @@
+.box {
+  background-color: var(--box-background);
+  border-radius: var(--box-radius);
+  margin-top: 0.8em;
+  padding: 1.5em;
+  font-size: 1em;
+}
+
+.box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box div span {
+  margin-left: 1.5em;
+  font-weight: bold;
+}
+
+.box div a {
+  cursor: pointer;
+  color: blue;
+}
+
+.box ul {
+  padding-left: 1.5em;
+}
+
+.box ul li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box ul li:nth-child(1):before {
+  content: "\2022";
+  color: #F49F85;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.box ul li:nth-child(1) span:nth-child(2) {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.box ul li:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box ul li:nth-child(2):before {
+  content: "\2022";
+  color: #AD1FEA;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.box ul li:nth-child(2) span:nth-child(2) {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.box ul li:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box ul li:nth-child(3):before {
+  content: "\2022";
+  color: #4661E6;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.box ul li:nth-child(3) span:nth-child(2) {
+  display: inline-block;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    margin: 0em auto;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .box {
+    min-width: 180px;
+    width: 30%;
+    margin: 1em 0em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    margin: 0.8em 1.2em 0em auto;
+  }
+}

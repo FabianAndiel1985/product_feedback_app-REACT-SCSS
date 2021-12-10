@@ -6,7 +6,7 @@ import  {LongWhiteBox,
          bottomRow
         } from "./RoadmapWhiteBox.module.scss";
 import { useHistory } from "react-router-dom";
-import Counter from "../suggestions/components/main/components/Counter";
+import Counter from "../suggestions/components/main/components/counter.component";
 import Pill from '../suggestions/components/sidebar/components/pill';
 import ColorStripe from "../shared/colorStripe";
 

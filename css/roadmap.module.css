@@ -26,6 +26,15 @@
       grid-template-rows: repeat(auto, 20px);
 }
 
+@media only screen and (min-width: 620px) {
+  .roadmapContainer .gridContainer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (20px)[auto];
+        grid-template-rows: repeat(auto, 20px);
+  }
+}
+
 .roadmapContainer .gridContainer > * {
-  padding: 2em;
+  padding: 0em;
 }

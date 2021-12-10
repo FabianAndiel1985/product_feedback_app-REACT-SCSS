@@ -1,7 +1,7 @@
 import React from 'react'
-import CustomButton from '../../components/shared/button';
+import CustomButton from '../../components/shared/button.component';
 import * as FeedbackDetailStyles from './styles.module.scss';
-import LongWhiteBox from '../../components/suggestions/components/main/components/LongWhiteBox'
+import LongWhiteBox from '../../components/suggestions/components/main/components/longWhiteBox.component.jsx'
 import data from "../../assets/data.json";
 import {useParams,useHistory} from 'react-router-dom'
 import Comments from '../../components/feedback/components/commentsComponent';

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import * as pillStyles from "./pill.module.scss" 
-import { handleFilterCriteriaChange } from '../../main/sortingService';
+import { handleFilterCriteriaChange } from '../../main/sorting.service';
 
 
 const Pill = ({text,orientation,children})=> {

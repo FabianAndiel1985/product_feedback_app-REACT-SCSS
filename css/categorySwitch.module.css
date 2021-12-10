@@ -11,6 +11,12 @@
   cursor: pointer;
 }
 
+@media only screen and (min-width: 620px) {
+  .switchContainer {
+    border: none;
+  }
+}
+
 .switchContainer .categoryBox {
   padding: 4px;
   text-align: center;

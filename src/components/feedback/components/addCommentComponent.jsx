@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as addCommentComponentStyles from './addCommentComponent.module.scss';
-import Button from '../../shared/button';
+import Button from '../../shared/button.component';
 import Textarea from '../../shared/textarea.component';
 
 

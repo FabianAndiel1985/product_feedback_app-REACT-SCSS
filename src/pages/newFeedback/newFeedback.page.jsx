@@ -4,8 +4,8 @@ import Input from "../../components/shared/input.component.jsx";
 import { Helmet } from "react-helmet";
 import * as newFeedbackStyles from "./newFeedback.module.scss";
 import Heading from "../../components/shared/heading.component";
-import CustomButton from "../../components/shared/button.jsx";
-import {brightVioletColor,darkBlueColor, hooverDarkBlue} from "../../constants/color-constants";
+import CustomButton from "../../components/shared/button.component.jsx";
+import {darkViolet,darkBlueColor, hooverDarkBlue} from "../../constants/color.constants";
 import CircleSymbol from "../../components/shared/circleSymbol.jsx";
 import { FaPlus } from 'react-icons/fa';
 import RouteBack from "../../components/shared/routeBack.component.jsx";
@@ -87,7 +87,7 @@ function NewFeedback() {
           />
           <CustomButton
           text={"Save Changes"}
-          color={brightVioletColor}
+          color={darkViolet}
           type={"submit"}
           />
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../../../../shared/button'
+import CustomButton from '../../../../shared/button.component'
 import * as addCommentStyles from "./addComment.module.scss"
 import Textarea from '../../../../shared/textarea.component'
 

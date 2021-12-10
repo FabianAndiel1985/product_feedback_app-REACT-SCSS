@@ -1,6 +1,5 @@
 import * as menubarStyles from "./menubar.module.scss";
-import CustomButton from "./button";
-import {brightVioletColor} from "../../constants/color-constants";
+import AddFeedbackButton from "./addFeedbackButton.component";
 
 function Menubar({children}) {
 
@@ -10,12 +9,7 @@ function Menubar({children}) {
                 {children}
             </div>
 
-                 <CustomButton 
-                 text={"+ Add Feedback"}
-                 color={brightVioletColor}
-                 hoverColor={"#c75af6"}
-                 link={"/new-feedback"}
-             /> 
+            <AddFeedbackButton />
         </div>
     )
 }

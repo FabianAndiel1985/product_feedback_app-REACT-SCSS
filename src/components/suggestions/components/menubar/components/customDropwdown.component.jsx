@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "primeicons/primeicons.css";
 import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
-import * as customDropdownClass from "./CustomDropdown.module.scss";
+import * as customDropdownClass from "./customDropdown.module.scss";
+import {CheckSymbol} from "../../../../../constants/icons.constants";
+import ColoredLine from "./coloredLine.component";
+
 
 const CustomDropdown = ({onSortCategoryChange}) => {
 
@@ -14,20 +17,6 @@ const CustomDropdown = ({onSortCategoryChange}) => {
       setSortingCriteriaComp(sortCategory)
     }
 
-    const ColoredLine = ({ color }) => (
-      <hr
-          style={{
-              color: color,
-              backgroundColor: color,
-              height: 2,
-              width: "100%"
-          }}
-      />
-  );
-
-  
-  const CheckSymbol = <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#AD1FEA" stroke-width="2" d="M1 5.233L4.522 9 12 1"/></svg>;
-  
   return (
     <div className={customDropdownClass.dropDownList}>
       <div className={customDropdownClass.dropDownList_textRow}>

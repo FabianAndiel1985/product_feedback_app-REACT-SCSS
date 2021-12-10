@@ -1,0 +1,21 @@
+.box {
+  background-color: var(--box-background);
+  border-radius: var(--box-radius);
+  margin-top: 0.8em;
+  padding: 1.5em;
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 620px) {
+  .box {
+    min-width: 180px;
+    width: 30%;
+    margin: 1em 0em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    margin: 0.8em 1.2em 0em auto;
+  }
+}

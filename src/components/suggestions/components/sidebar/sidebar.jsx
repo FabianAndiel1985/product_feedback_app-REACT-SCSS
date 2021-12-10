@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Pill from "./components/pill";
 import * as sidebarStyles from "./sidebar.module.scss";
-import {handleFilterCriteriaChange} from '../main/sortingService';
+import {handleFilterCriteriaChange} from '../main/sorting.service';
 import { useHistory } from "react-router-dom";
 import { splitIntoCategories,countOcc } from "./sidebar.services";
 import { categories } from "../../../../constants/categories.constants";
@@ -9,7 +9,8 @@ import RoadmapBox from "./components/roadmapBox.component";
 import PillBox from "./components/pillBox.component";
 import MobileSidebar from "./components/mobileSidebar.component";
 import useWindowDimensions from "../../../../helpers/getWindowDimensions.hook";
-import { mqTabletMin } from "../../../../constants/sizes.constants";
+import { mqTabletMin } from "../../../../constants/sizes.constants.js";
+import { HamburgerIcon, CloseIcon } from "../../../../constants/icons.constants.js";
 
 const Sidebar = ({data}) => {
 
@@ -26,9 +27,6 @@ const Sidebar = ({data}) => {
     }
 
     let occurences = countOcc(splitedObj);
-
-    const HamburgerIcon = <svg width="20" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z"/></g></svg>;
-    const CloseIcon = <svg width="18" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M15.01.368l2.122 2.122-6.01 6.01 6.01 6.01-2.122 2.122L9 10.622l-6.01 6.01L.868 14.51 6.88 8.5.87 2.49 2.988.368 9 6.38 15.01.37z" fill="#FFF" fill-rule="evenodd"/></svg>
 
     const toggelPanel = ()=>{
         setIsOpen((previousState)=>!previousState)

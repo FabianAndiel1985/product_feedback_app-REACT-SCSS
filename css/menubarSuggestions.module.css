@@ -1,5 +1,12 @@
 .firstItem .symbol {
   display: none;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 620px) {
+  .firstItem .symbol {
+    display: initial;
+  }
 }
 
 .firstItem .amountOfSuggestions {
