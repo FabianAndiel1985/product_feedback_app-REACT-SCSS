@@ -26,8 +26,6 @@ export const sortData = (sortingCriteria,data) => {
     else if(sortingCriteria === "All") {
         return data;
     }
-
-    
 }
 
 // sort the comments noch weiter zerlegen
