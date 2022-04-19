@@ -11,6 +11,7 @@ import MobileSidebar from "./components/mobileSidebar.component";
 import useWindowDimensions from "../../../../helpers/getWindowDimensions.hook";
 import { mqTabletMin } from "../../../../constants/sizes.constants.js";
 import { HamburgerIcon, CloseIcon } from "../../../../constants/icons.constants.js";
+import { v4 as uuidv4 } from 'uuid';
 
 const Sidebar = ({data}) => {
 
@@ -46,6 +47,7 @@ const Sidebar = ({data}) => {
                 text={item} 
                 orientation={"horizontal"}
                 setFilterCriteria={handleFilterCriteriaChange}
+                key={uuidv4()}
               />
         );
       });

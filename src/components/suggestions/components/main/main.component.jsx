@@ -4,6 +4,8 @@ import LongWhiteBox from './components/longWhiteBox.component';
 import NoFeedback from './components/noFeedback.component';
 import {sortData} from './sorting.service'
 import noFeedback from '../../../../assets/illustration-empty.svg'
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Main = ({data}) => {
 
@@ -26,6 +28,7 @@ const Main = ({data}) => {
                         comments={request.comments}
                         linkFurther={request.comments ? true : false}
                         id={request.id}
+                        key={uuidv4()}
                     />
                 ))
                 :

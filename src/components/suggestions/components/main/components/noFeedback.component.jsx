@@ -1,4 +1,4 @@
-import * as noFeedbackStyles from "./noFeedback.module.scss";
+import * as noFeedbackStyles from "./NoFeedback.module.scss";
 import AddFeedbackButton from "../../../../shared/addFeedbackButton.component";
 
 const NoFeedback = ({illustration})=> {

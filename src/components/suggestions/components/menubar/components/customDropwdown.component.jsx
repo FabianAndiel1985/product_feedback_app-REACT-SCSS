@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "primeicons/primeicons.css";
 import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
-import * as customDropdownClass from "./customDropdown.module.scss";
+import * as customDropdownClass from "./CustomDropdown.module.scss";
 import {CheckSymbol} from "../../../../../constants/icons.constants";
 import ColoredLine from "./coloredLine.component";
 
